@@ -10,7 +10,7 @@
   position: fixed;
   bottom: 0px;
   left: 0px;
-  padding: 20px;
+  margin: 0 0 20px 20px;
 }
 
 .icons-theme
@@ -50,6 +50,24 @@
 .icons-theme i:nth-child(3)
 {
   border-radius: 0 5px 5px 0;
+}
+
+
+.whatsapp-wrapper
+{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0 20px 20px 0;
+}
+
+.whatsapp-button
+{
+  background-color: #51ff00bf;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 /*MEDIAQUERIES*/
