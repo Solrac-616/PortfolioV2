@@ -1,10 +1,14 @@
 
-const themeButtons = () => {
+const ThemeButtons = () => {
   return (
-    <div>
-        <p>theme change</p>
+    <div className="theme-buttons">
+        <div className="icons-theme">
+            <i className="fa-solid fa-sun"></i>
+            <i className="fa-solid fa-moon"></i>
+            <i className="fa-solid fa-display"></i>
+        </div>
     </div>
   )
 }
 
-export default themeButtons
+export default ThemeButtons

@@ -4,3 +4,93 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.theme-buttons
+{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  padding: 20px;
+}
+
+.icons-theme
+{
+  border-radius: 5px;
+  background-color: #ffffff00;
+  box-shadow: 2px 2px 5px 0px #000000bf;
+  display: flex;
+  /* ¡padding: 5px;
+  gap: 5px; */
+}
+
+.icons-theme i
+{
+  position: relative;
+  background: #e9e9e9;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  transform: scale(1.0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s ease;
+}
+.icons-theme i:hover
+{
+  transform: scale(1.1);
+  box-shadow: 2px 2px 5px 0px #000000bf;
+  z-index: 1;
+}
+
+.icons-theme i:nth-child(1)
+{
+  border-radius: 5px 0 0 5px;
+}
+.icons-theme i:nth-child(3)
+{
+  border-radius: 0 5px 5px 0;
+}
+
+/*MEDIAQUERIES*/
+
+/*mediaqueri standar
+
+@media screen and (min-width: 500px) and (max-width: 800px)
+{
+
+}
+*/
+
+
+/* MEDIAQUERIES BASADOS EN TAILWIND */
+
+@media screen and (min-width: 1536px) 
+{
+
+}
+
+@media screen and (max-width: 1535px)
+{
+
+}
+
+@media screen and (max-width: 1279px)
+{
+
+}
+
+@media screen and (max-width: 1023px)
+{
+
+}
+
+@media screen and (max-width: 767px)
+{
+
+}
+
+@media screen and (max-width: 639px)
+{
+
+}
