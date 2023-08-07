@@ -1,7 +1,6 @@
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route, Navigate } from "react-router-dom";
 
 import './App.css'
-import './loader.css'
 
 // IMPORT LAYOUTS
 import Root from "./layouts/Root";
