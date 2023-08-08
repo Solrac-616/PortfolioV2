@@ -4,7 +4,6 @@ import { useFollowPointer } from '../Hooks/useFollowPointer';
 
 const CustomCursor = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0, });
-  const [outlinePosition, setoutlinePosition] = useState({ x: 0, y: 0, });
 
   const ref = useRef(null);
   const { x, y } = useFollowPointer(ref);
@@ -19,11 +18,6 @@ const CustomCursor = () => {
         y: event.clientY,
       });
 
-
-      setoutlinePosition({
-        x: event.clientX,
-        y: event.clientY,
-      });
     });
   }, []);
 
@@ -33,23 +27,18 @@ const CustomCursor = () => {
 
       
       <motion.div 
-        className="cursor-outline2" 
+        id='outline'
+        className="cursor-outline" 
         ref={ref}
         animate={{ x, y }}
         transition={{
           type: "spring",
-          damping: 15,
-          stiffness: 50,
-          restDelta: 0.001
+          damping: 20,
+          stiffness: 200,
+          restDelta: 0.1
         }}
       />
 
-      <div className="cursor-outline" style={{
-          position: "fixed",
-          top: outlinePosition.y,
-          left: outlinePosition.x,
-        }}
-      />
 
       <div className='custom-cursor' style={{
           position: "fixed",
