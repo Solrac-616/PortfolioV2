@@ -50,7 +50,7 @@ const Root = () => {
         
       </main>
 
-      <Cursor isGelly={true} />
+      <Cursor isGelly={true} cursorBackgrounColor="#00000057"/>
     </div>
   )
 }
