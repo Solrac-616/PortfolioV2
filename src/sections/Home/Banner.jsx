@@ -1,7 +1,9 @@
 
 const Banner = () => {
   return (
-    <div>Banner</div>
+    <section id="bannerHome">
+      <h2>BANNER</h2>
+    </section>
   )
 }
 

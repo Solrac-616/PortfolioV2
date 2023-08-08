@@ -1,8 +1,13 @@
-
+import "../Contact.css"
+import Contactform from "../sections/Contact/Contactform"
+import Socials from "../sections/Contact/Socials"
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+      <Socials />
+      <Contactform />
+    </>
   )
 }
 

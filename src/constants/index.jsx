@@ -2,50 +2,55 @@ import Images from "../assets";
 
 export const navLinks = [
   {
-      id: "",
+      id: "/",
       scrollId: false,
-      title: "INICIO",
+      title: "Home",
   },
   {
-    id: "portafolio",
-    scrollId: false,
-    title: "SERVICIOS",
+    id: "/",
+    scrollId: "about",
+    title: "About",
   },
   {
       id: "/",
-      scrollId: "products",
-      title: "PRODUCTOS",
+      scrollId: "skills",
+      title: "Skills",
   },
   {
-      id: "about",
+      id: "contact",
       scrollId: false,
-      title: "QUIENES SOMOS",
+      title: "Contact",
+  },
+  {
+      id: "contact",
+      scrollId: "contactForm",
+      title: "Send Mail",
   },
 ];
 
-const itemsCardsMenu =
+const skills =
 [
   {
     id: 1,
-    name: "Soluciones tecnológicas",
+    name: "React",
+    img: Images.react
   },
   {
     id: 2,
-    name: "Telecomunicaciones",
+    name: "React",
+    img: Images.react
   },
   {
     id: 3,
-    name: "Seguridad digital",
+    name: "React",
+    img: Images.react
   },
   {
     id: 4,
-    name: "Electricidad",
-  },
-  {
-    id: 5,
-    name: "Negocio digital",
+    name: "React",
+    img: Images.react
   }
 ]
 
 
-export { itemsCardsMenu };
+export { skills };
