@@ -8,8 +8,8 @@ export function useFollowPointer(ref) {
     const handlePointerMove = ({ clientX, clientY }) => {
       const element = ref.current;
 
-      const x = clientX - element.offsetLeft - element.offsetWidth / 2;
-      const y = clientY - element.offsetTop - element.offsetHeight / 2;
+      const x = clientX * 1;
+      const y = clientY * 1;
       setPoint({ x, y });
     };
 

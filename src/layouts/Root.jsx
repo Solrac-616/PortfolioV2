@@ -4,13 +4,16 @@ import { Outlet } from 'react-router-dom'
 // IMPORTS COMPONENTES
 import ThemeButtons from '../components/themeButtons'
 import WhatsApp from '../components/WhatsApp'
-import CustomCursor from '../components/CustomCursor'
+// import CustomCursor from '../components/CustomCursor'
 // import AnimateCursor from '../components/AnimateCursor'
 
 // IMPORTS PARA LA FUNCION DE SCROLL
 import { useLocation } from 'react-router-dom';
 import { animateScroll as scroll, scroller } from 'react-scroll';
 import Navbar from '../components/Navbar';
+import { Cursor } from 'react-creative-cursor';
+
+import 'react-creative-cursor/dist/styles.css';
 
 const Root = () => {
   const location = useLocation();
@@ -35,14 +38,20 @@ const Root = () => {
   }, [location]);
 
   return (
-    <main className='main-content'>
-      <Navbar />
-      <Outlet />
-      <ThemeButtons />
-      <WhatsApp />
-      <CustomCursor />
-      {/* <AnimateCursor /> */}
-    </main>
+    <div className='root-layout'>
+    
+      <main className='main-content'>
+        <Navbar />
+        <Outlet />
+        <ThemeButtons />
+        <WhatsApp />
+        {/* <CustomCursor /> */}
+        {/* <AnimateCursor /> */}
+        
+      </main>
+
+      <Cursor isGelly={true} />
+    </div>
   )
 }
 

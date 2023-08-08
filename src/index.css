@@ -7,10 +7,10 @@
 
 html
 {
-  cursor: none ;
+  /* cursor: none ; */
 }
 
-.main-content
+.root-layout
 {
   overflow: hidden;
 }
