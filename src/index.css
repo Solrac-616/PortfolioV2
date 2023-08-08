@@ -76,6 +76,7 @@ html
 {
   position: relative;
   background: #e9e9e9;
+  color: #000000;
   height: 40px;
   width: 40px;
   cursor: none;
@@ -85,10 +86,19 @@ html
   align-items: center;
   transition: all .5s ease;
 }
+.icons-theme i.theme-active
+{
+  color: #0030b4;
+}
 .dark .icons-theme i
 {
   background-color: #0f172a;
-  color: #38bdf8;
+  color: #38bff89d;
+}
+.dark .icons-theme i.theme-active
+{
+  background-color: #0f172a;
+  color: #38bff8;
 }
 .icons-theme i:hover
 {
