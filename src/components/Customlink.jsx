@@ -7,8 +7,11 @@ const Customlink = (props) => {
   return (
     <>
     
-      <Link to={`${id}`} state={{ scrollTo: scrollId }} className={`relative flex dark:text-white hover:text-primary dark:hover:text-primary custom-link-1 px-2 py-1 ${active ? 'active' : '' }`} aria-current="page" onClick={onclick}>
-        {title}
+      <Link data-cursor-color="#00000022" to={`${id}`} state={{ scrollTo: scrollId }} className={`nav-link ${active ? 'active' : '' }`} aria-current="page" onClick={onclick}>
+        <span>
+          {title}
+        </span>
+        <i></i>
       </Link>
         
     </>

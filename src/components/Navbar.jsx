@@ -32,10 +32,10 @@ const Navbar = () => {
           <div className="logo">
 
           </div>
-          <ul className="nav-links">
+          <ul className="nav-links font-montserrat">
             
             {navLinks.map((item) => (
-              <li key={item.title}>
+              <li key={item.title}> 
                 <Customlink
                 id={item.id}
                 scrollId={item.scrollId}
