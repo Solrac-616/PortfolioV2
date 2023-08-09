@@ -35,7 +35,7 @@ body
 }
 
 .dark body{
-  background-color: #131313 !important;
+  background-color: #101010 !important;
   color: #ffffff;
 }
 
@@ -71,7 +71,7 @@ header
 
 .navbar-default
 {
-  background-color: rgb(33, 33, 33);
+  background-color: #212121;
   backdrop-filter: blur(2px);
   padding: 5px 0px;
   box-shadow: 0px 0px 5px 0px #000000a9;
@@ -186,17 +186,18 @@ header
 }
 .icons-theme i.theme-active
 {
-  color: #0030b4;
+  background-color: #212121;
+  color: #38bff8;
 }
 .dark .icons-theme i
 {
-  background-color: #0f172a;
+  background-color: #212121;
   color: #38bff89d;
 }
 .dark .icons-theme i.theme-active
 {
-  background-color: #0f172a;
-  color: #38bff8;
+  background-color: #38bff8;
+  color: #ffffff;
 }
 .icons-theme i:hover
 {
