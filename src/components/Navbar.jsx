@@ -26,22 +26,28 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className={`${scrolled ? "fixed-navbar" : ""}`}>
-        <div className="logo">
+      <nav className={`navbar-default ${scrolled ? "fixed-navbar" : ""}`}>
+        <div className="row-default-v1 row-navbar">
 
+          <div className="logo">
+
+          </div>
+          <ul className="nav-links">
+            
+            {navLinks.map((item) => (
+              <li key={item.title}>
+                <Customlink
+                id={item.id}
+                scrollId={item.scrollId}
+                active={active === item.id}
+                onclick={()=>setActive(item.id)}
+                title={item.title}
+                />
+              </li>
+            ))}
+
+          </ul>
         </div>
-        <ul className="nav-links">
-          {navLinks.map((item) => (
-            <Customlink
-              key={item.title}
-              id={item.id}
-              scrollId={item.scrollId}
-              active={active === item.id}
-              onclick={()=>setActive(item.id)}
-              title={item.title}
-            />
-          ))}
-        </ul>
       </nav>
     </header>
   )

@@ -2,16 +2,16 @@ import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom'
 
 // IMPORTS COMPONENTES
+import Navbar from '../components/Navbar';
 import ThemeButtons from '../components/themeButtons'
 import WhatsApp from '../components/WhatsApp'
-// import CustomCursor from '../components/CustomCursor'
-// import AnimateCursor from '../components/AnimateCursor'
+
+// CURSOR ANIMADO DE LA LIBRERIA - SE IMPORTA AQUI PARA QUE ESTE DISPONIBLE EN TODA LA APP
+import { Cursor } from 'react-creative-cursor';
 
 // IMPORTS PARA LA FUNCION DE SCROLL
 import { useLocation } from 'react-router-dom';
 import { animateScroll as scroll, scroller } from 'react-scroll';
-import Navbar from '../components/Navbar';
-import { Cursor } from 'react-creative-cursor';
 
 import 'react-creative-cursor/dist/styles.css';
 
@@ -41,12 +41,11 @@ const Root = () => {
     <div className='root-layout'>
     
       <main className='main-content'>
+        
         <Navbar />
         <Outlet />
         <ThemeButtons />
         <WhatsApp />
-        {/* <CustomCursor /> */}
-        {/* <AnimateCursor /> */}
         
       </main>
 
