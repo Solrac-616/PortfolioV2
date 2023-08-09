@@ -31,7 +31,8 @@ const Root = () => {
       scroll.scrollToTop({
         duration: 800,
         delay: 0,
-        smooth: 'easeInOutQuart'
+        smooth: 'easeInOutQuart',
+        offset: 0
       });
             
     }
