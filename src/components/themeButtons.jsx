@@ -30,6 +30,7 @@ const ThemeButtons = () => {
     
       default:
         localStorage.removeItem("theme");
+        onWindowMatch();
         break;
     }
   }, [theme])
