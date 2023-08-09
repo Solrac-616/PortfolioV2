@@ -54,13 +54,15 @@ header
 
 nav
 {
-  background-color: #b9b9b9;
+  background-color: #cecece;
   backdrop-filter: blur(2px);
 }
 
 .fixed-navbar
 {
   position: fixed;
+  width: 100%;
+  animation: fixednav .5s ease-in-out;
 }
 
 .row-navbar
@@ -85,6 +87,19 @@ nav
 .row-navbar li a
 {
   text-decoration: none;
+}
+
+@keyframes fixednav {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(0%);
+    
+  }
 }
 
 
@@ -164,14 +179,75 @@ nav
 
 .whatsapp-button
 {
-  background-color: #51ff00bf;
+  box-sizing: content-box;
+  position: relative;
+  background-color: #25D366;
   height: 60px;
   width: 60px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 
+.whatsapp-button::before,
+.whatsapp-button::after
+{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #25D366;
+}
 
+.whatsapp-button::before
+{
+  animation: whatsapppulseA 1.5s ease-out infinite;
+}
+
+.whatsapp-button::after
+{
+  animation: whatsapppulseB 1.5s ease-out infinite;
+}
+
+.whatsapp-button i
+{
+  color: #ffffff;
+  font-size: 40px;
+}
+
+@keyframes whatsapppulseA {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  35% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+@keyframes whatsapppulseB {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  35% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
 
 
 
