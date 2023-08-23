@@ -130,11 +130,6 @@ header
   color: #fff;
 }
 
-.row-navbar li a:hover
-{
-  font-weight: 700 !important;
-}
-
 @keyframes fixednav {
   0% {
     transform: translateY(-100%);
