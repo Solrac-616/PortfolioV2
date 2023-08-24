@@ -5,10 +5,11 @@ const ThemeButtons = () => {
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "system"
   );
   const pageElement = document.documentElement;
+  
   const darkQuery = window.matchMedia("(prefers-color-schema: dark)");
-  console.log('====================================');
-  console.log(darkQuery);
-  console.log('====================================');
+  // console.log('====================================');
+  // console.log(darkQuery);
+  // console.log('====================================');
 
   function onWindowMatch(){
     if (localStorage.theme === 'dark' || (!("theme" in localStorage) && darkQuery.matches)) {

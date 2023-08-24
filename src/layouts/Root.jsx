@@ -14,6 +14,7 @@ import { useLocation } from 'react-router-dom';
 import { animateScroll as scroll, scroller } from 'react-scroll';
 
 import 'react-creative-cursor/dist/styles.css';
+import Themebuttondual from '../components/themebuttondual';
 
 const Root = () => {
   const location = useLocation();
@@ -45,7 +46,8 @@ const Root = () => {
         
         <Navbar />
         <Outlet />
-        <ThemeButtons />
+        {/* <ThemeButtons /> */}
+        <Themebuttondual />
         <WhatsApp />
         
       </main>

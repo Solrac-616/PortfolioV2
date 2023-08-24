@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { navLinks } from '../constants';
+import { Link } from 'react-router-dom';
 import Customlink from './Customlink';
 import Images from '../assets';
 
@@ -30,10 +31,10 @@ const Navbar = () => {
       <nav className={`navbar-default ${scrolled ? "fixed-navbar" : ""}`}>
         <div className="row-default-v1 row-navbar">
 
-          <div className="logo">
+          <Link to={`/`} state={{ scrollTo: false }}>
             <img src={Images.logoA} alt="logo" className='logo-navbar' />
-          </div>
-          
+          </Link>
+
           <ul className="nav-links font-montserrat">
             
             {navLinks.map((item) => (

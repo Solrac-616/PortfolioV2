@@ -159,7 +159,8 @@ header
 
 /* ------------------------------------- BOTONES DEL TEMA */
 
-.theme-buttons
+.theme-buttons,
+.theme-buttons-dual
 {
   position: fixed;
   bottom: 0px;
@@ -191,6 +192,77 @@ header
   align-items: center;
   transition: all .5s ease;
 }
+/* ------------------------------------- BOTONES DEL TEMA DUAL INICIO */
+.icons-theme-dual
+{
+  position: relative;
+  display: flex;
+  border-radius: 5px;
+  background-color: #212121 !important;
+  box-shadow: 2px 2px 5px 0px #000000bf;
+}
+
+.icons-theme-dual i
+{
+  position: relative;
+  color: #ffffff;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s ease;
+}
+
+.icons-theme-dual i:hover
+{
+  color: #38bff8;
+}
+
+.icons-theme-dual i:nth-child(1)
+{
+  border-radius: 5px 0 0 5px;
+}
+.icons-theme-dual i:nth-child(2)
+{
+  border-radius: 0 5px 5px 0;
+}
+
+.icons-theme-dual i::before
+{
+  transform: scale(1) rotateY(0deg);
+  transition: all .7s;
+}
+.icons-theme-dual i:hover::before
+{
+  transform: scale(2) rotateY(360deg);
+}
+
+.back-theme-btn-dual
+{
+  position: absolute;
+  top: 0;
+  right: 50%;
+  height: 100%;
+  width: 50%;
+  background: #38bff8;
+  border-radius: 5px 0 0 5px;
+  transition: all .5s;
+}
+
+.back-theme-btn-dual.theme-change
+{
+  right: 0%;
+  border-radius: 0 5px 5px 0;
+}
+
+.icons-theme-dual i.theme-active
+{
+  color: #212121 !important;
+}
+
+/* ------------------------------------- BOTONES DEL TEMA DUAL FINAL */
 .icons-theme i.theme-active
 {
   background-color: #212121;
@@ -222,6 +294,8 @@ header
   border-radius: 0 5px 5px 0;
 }
 
+
+/* ------------------------- BOTON DE WHATSAPP */
 
 .whatsapp-wrapper
 {
