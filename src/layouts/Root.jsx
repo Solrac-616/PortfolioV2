@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 // IMPORTS COMPONENTES
 import Navbar from '../components/Navbar';
-import ThemeButtons from '../components/themeButtons'
+// import ThemeButtons from '../components/themeButtons'
 import WhatsApp from '../components/WhatsApp'
 
 // CURSOR ANIMADO DE LA LIBRERIA - SE IMPORTA AQUI PARA QUE ESTE DISPONIBLE EN TODA LA APP

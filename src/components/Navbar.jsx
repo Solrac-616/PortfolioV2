@@ -31,8 +31,8 @@ const Navbar = () => {
       <nav className={`navbar-default ${scrolled ? "fixed-navbar" : ""}`}>
         <div className="row-default-v1 row-navbar">
 
-          <Link to={`/`} state={{ scrollTo: false }}>
-            <img src={Images.logoA} alt="logo" className='logo-navbar' />
+          <Link to={`/`} state={{ scrollTo: false }} data-cursor-text="Home" data-cursor-color="#000000bf" data-cursor-size="60px" className='logo-navbar'>
+            <img src={Images.logoA} alt="logo" className='' />
           </Link>
 
           <ul className="nav-links font-montserrat">

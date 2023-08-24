@@ -40,7 +40,7 @@ body
 }
 
 /* clases de prueba */
-section
+.section-test
 {
   height: 100vh;
   border-bottom: 4px solid #0030b4;
@@ -69,10 +69,15 @@ header
   height: 80px;
 }
 
-.logo-navbar
+.logo-navbar img
 {
   max-height: 70px;
   transition: all .5s;
+}
+
+.logo-navbar:hover img
+{
+  filter: drop-shadow(0px 0px 15px #38bff8);
 }
 
 .navbar-default
@@ -99,7 +104,7 @@ header
   transition-delay: .3s;
 }
 
-.fixed-navbar .logo-navbar
+.fixed-navbar .logo-navbar img
 {
   max-height: 60px;
 }
