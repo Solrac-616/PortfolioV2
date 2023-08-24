@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { navLinks } from '../constants';
 import Customlink from './Customlink';
+import Images from '../assets';
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -30,8 +31,9 @@ const Navbar = () => {
         <div className="row-default-v1 row-navbar">
 
           <div className="logo">
-
+            <img src={Images.logoA} alt="logo" className='logo-navbar' />
           </div>
+          
           <ul className="nav-links font-montserrat">
             
             {navLinks.map((item) => (
