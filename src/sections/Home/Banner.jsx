@@ -30,7 +30,7 @@ const Banner = () => {
           </div>
         </div>
         <div className="overlay">
-          
+          <div className="figure"></div>
         </div>
       </div>
     </section>
