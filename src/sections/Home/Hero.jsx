@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
-// import Typed from 'react-typed';
 
-const Banner = () => {
-  const [rotate, setRotate] = useState("start");
+const Hero = () => {
+  const [typeState, setTypeState] = useState("start");
 
   return (
     <section id="bannerHome" className="banner-home">
@@ -12,44 +11,33 @@ const Banner = () => {
         <h2>PORTFOLIO</h2>
         <div className="typed-banner">
           <p>I&apos;m Carlos Brito</p>
-          {/* <Typed
-            strings={["Full-Stack Developer", "How can we do?", "How can we do? React", "How can we do? React - MERN?", "How can we do? Angular", "How can we do? Angular + Node?", "How can we do? Next", "Alright", "Alright let's do it"]}
-            typeSpeed={100}
-            backSpeed={20}
-            backDelay={1000}
-            loop
-            smartBackspace
-          /> */}
           <TypeAnimation
             sequence={[
               "Full-Stack Developer",
               1000,
               "How can we do?",
-              1000,
-              () => {
-                setRotate("React");
+              1000,() => {
+                setTypeState("React");
                 console.log('===============STATE=============');
-                console.log(rotate);
+                console.log(typeState);
                 console.log('====================================');
               },
               "How can we do? React",
               1000,
               "How can we do? React - MERN?",
-              1000,
-              () => {
-                setRotate("Angular");
+              1000,() => {
+                setTypeState("Angular");
                 console.log('===============Rotate=============');
-                console.log(rotate);
+                console.log(typeState);
                 console.log('====================================');
               },
               "How can we do? Angular",
               1000,
               "How can we do? Angular + Node?",
-              1000,
-              () => {
-                setRotate("Next");
+              1000,() => {
+                setTypeState("Next");
                 console.log('===============Rotate=============');
-                console.log(rotate);
+                console.log(typeState);
                 console.log('====================================');
               },
               "How can we do? Next",
@@ -57,11 +45,10 @@ const Banner = () => {
               "Alright",
               1000,
               "Alright let's do it",
-              1000,
-              () => {
-                setRotate("start");
+              1000,() => {
+                setTypeState("start");
                 console.log('===============Rotate=============');
-                console.log(rotate);
+                console.log(typeState);
                 console.log('====================================');
               },
             ]}
@@ -71,9 +58,6 @@ const Banner = () => {
             repeat={Infinity}
           />
         </div>
-      </div>
-      <div className="banner-inset">
-        
       </div>
       <div className="profession-container">
         <div className="profession-box font-raleway">
@@ -105,4 +89,4 @@ const Banner = () => {
   )
 }
 
-export default Banner
+export default Hero

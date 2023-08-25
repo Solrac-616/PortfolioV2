@@ -78,7 +78,7 @@ header
   position: relative;
   min-height: 80px;
   height: 80px;
-  z-index: 999999999;
+  z-index: 1;
 }
 
 .logo-navbar img
@@ -183,7 +183,6 @@ header
   bottom: 0px;
   left: 0px;
   margin: 0 0 20px 20px;
-  z-index: 99999999;
 }
 
 .icons-theme
@@ -326,7 +325,6 @@ header
   bottom: 0;
   right: 0;
   margin: 0 20px 20px 0;
-  z-index: 99999999;
 }
 
 .whatsapp-button
