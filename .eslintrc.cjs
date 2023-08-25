@@ -16,6 +16,5 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    "quotes": ["single", { "allowTemplateLiterals": true }]
   },
 }

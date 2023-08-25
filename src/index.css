@@ -7,6 +7,22 @@
   box-sizing: border-box;
 }
 
+/* Z-INDEX 
+loader 9999999999
+header 999999999
+whatsapp 99999999
+themebtn 99999999
+*/
+
+body
+{
+  background-color: #f1f1f1;
+}
+.dark body{
+  background-color: #101010 !important;
+  color: #ffffff;
+}
+
 .font-montserrat
 {
   font-family: 'Montserrat', sans-serif;
@@ -29,14 +45,9 @@
   max-width: 1500px;
   margin: auto;
 }
-body
+.row-default-v2
 {
-  background-color: #f1f1f1;
-}
 
-.dark body{
-  background-color: #101010 !important;
-  color: #ffffff;
 }
 
 /* clases de prueba */
@@ -49,7 +60,6 @@ body
   justify-content: center;
 }
 /* clases de prueba */
-
 
 .custom-cursor
 {
@@ -65,8 +75,10 @@ body
 /*  ---------------- NAVBAR and Header */
 header
 {
+  position: relative;
   min-height: 80px;
   height: 80px;
+  z-index: 999999999;
 }
 
 .logo-navbar img
@@ -171,6 +183,7 @@ header
   bottom: 0px;
   left: 0px;
   margin: 0 0 20px 20px;
+  z-index: 99999999;
 }
 
 .icons-theme
@@ -205,6 +218,11 @@ header
   border-radius: 5px;
   background-color: #212121 !important;
   box-shadow: 2px 2px 5px 0px #000000bf;
+}
+
+.dark .icons-theme-dual
+{
+  box-shadow: 3px 3px 7px 0px #38bff88f;
 }
 
 .icons-theme-dual i
@@ -308,6 +326,7 @@ header
   bottom: 0;
   right: 0;
   margin: 0 20px 20px 0;
+  z-index: 99999999;
 }
 
 .whatsapp-button

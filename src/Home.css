@@ -1,4 +1,93 @@
-.canvas-monster
+.banner-home
 {
-  background-color: black;
+  position: relative;
+  height: 768px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+
 }
+
+.profession-container
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 768px;
+  height: 768px;
+  /* background-color: red; */
+}
+
+.profession-box
+{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: yellow; */
+  border-radius: 50%;
+}
+
+.profession-box .profession
+{
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  transform-origin: 384px;
+  transform: rotate(calc(360deg / 4 * var(--i))) translateX(-50%);
+  background-color: #f1f1f1;
+}
+
+.dark .profession-box .profession
+{
+  background-color: #101010 ;
+}
+
+.profession i
+{
+  font-size: 34px;
+}
+.profession h3
+{
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.profession-box .circle
+{
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 38, 255, 0.432); */
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.overlay
+{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-top: 384px solid red;
+  border-left: 384px solid yellow;
+  border-right: 384px solid blue;
+  border-bottom: 384px solid green;
+  z-index: 1;
+}
+
+/* .profession-box:nth-child(1) .profession
+{
+  position: absolute;
+} */

@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(14, 14, 14);
+  z-index: 9999999999;
 }
 
 .loader {
