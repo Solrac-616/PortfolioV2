@@ -132,6 +132,10 @@
   font-weight: 600;
   color: #212121;
 }
+.dark .profession h3
+{
+  color: #38bff8;
+}
 
 .profession-box .circle
 {
