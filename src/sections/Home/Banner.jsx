@@ -1,5 +1,7 @@
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import { appear, fadeIn, slideInFade, staggerContainer } from '../../utils/motion';
 
 
 const Banner = () => {
@@ -7,15 +9,22 @@ const Banner = () => {
   const [type, setType] = useState(true);
 
   return (
-    <section id="bannerHome" className="banner-home">
+    <motion.section 
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.6 }}
+      id="bannerHome" className="banner-home"
+    >
       <div className="row-default-v1">
         <div className='banner-content'>
-          <p className='greeting font-montserrat'>Hi!! this is my</p>
-          <h2 className='font-raleway'>PORTFOLIO</h2>
-          <div className="typed-banner font-montserrat">
+          <motion.p variants={fadeIn('right', 'tween', 0.3 , 0.5)} className='greeting font-montserrat'>Hi!! this is my</motion.p>
+          <motion.h2 variants={appear('tween', 0.5, 0.5)} className='font-raleway'>PORTFOLIO</motion.h2>
+          <motion.div variants={fadeIn('up', 'tween', 1 , 0.5)} className="typed-banner font-montserrat">
             <p>I&apos;m Carlos Brito</p>
             <TypeAnimation
               sequence={[
+                1000,
                 () => {
                   setAngle(0);
                 },
@@ -63,14 +72,14 @@ const Banner = () => {
               deletionSpeed={150}
               repeat={Infinity}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="banner-inset">
 
       </div>
       <div className="profession-container">
-        <div className={`profession-box font-raleway ${type && "circle-transitions" } `}
+        <motion.div variants={appear('tween', 1, 0.6)} className={`profession-box font-raleway ${type && "circle-transitions" } `}
         style={{
           transform: `rotate(-${angle}deg)`,
         }}
@@ -94,12 +103,12 @@ const Banner = () => {
           <div className="circle">
 
           </div>
-        </div>
-        <div className="overlay">
+        </motion.div>
+        <motion.div variants={slideInFade('right', 'tween', 0.5, 0.6)} className="overlay">
           <div className="figure"></div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

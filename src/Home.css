@@ -38,6 +38,11 @@
   box-shadow: inset 0 0 13px #000000ec;
 }
 
+.dark .banner-inset
+{
+  box-shadow: inset 0 0 13px #38bff8;
+}
+
 .typed-banner
 {
   display: flex;
@@ -147,6 +152,10 @@
   left: 0;
   bottom: 0;
   filter: drop-shadow(0 0 13px #000000ec);
+}
+.dark .overlay
+{
+  filter: drop-shadow(0 0 13px #38bff8);
 }
 .overlay .figure
 {

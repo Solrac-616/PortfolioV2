@@ -34,7 +34,6 @@ const Navbar = () => {
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
         className={`navbar-default ${scrolled ? "fixed-navbar" : ""}`}
       >
         <div className="row-default-v1 row-navbar">
