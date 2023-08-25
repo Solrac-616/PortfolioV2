@@ -3,6 +3,8 @@ import { navLinks } from '../constants';
 import { Link } from 'react-router-dom';
 import Customlink from './Customlink';
 import Images from '../assets';
+import { motion } from 'framer-motion';
+import { fadeIn, staggerContainer, zoomIn } from '../utils/motion';
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -28,17 +30,23 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className={`navbar-default ${scrolled ? "fixed-navbar" : ""}`}>
+      <motion.nav 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className={`navbar-default ${scrolled ? "fixed-navbar" : ""}`}
+      >
         <div className="row-default-v1 row-navbar">
 
           <Link to={`/`} state={{ scrollTo: false }} data-cursor-text="Home" data-cursor-color="#000000bf" data-cursor-size="60px" className='logo-navbar'>
-            <img src={Images.logoA} alt="logo" className='' />
+            <motion.img src={Images.logoA} variants={zoomIn(0.4, 0.7)} alt="logo" className='' />
           </Link>
 
           <ul className="nav-links font-montserrat">
             
-            {navLinks.map((item) => (
-              <li key={item.title}> 
+            {navLinks.map((item, index) => (
+              <motion.li key={item.title} variants={fadeIn('down', 'spring', index * 0.3 , 0.8)}> 
                 <Customlink
                 id={item.id}
                 scrollId={item.scrollId}
@@ -46,12 +54,12 @@ const Navbar = () => {
                 onclick={()=>setActive(item.id)}
                 title={item.title}
                 />
-              </li>
+              </motion.li>
             ))}
 
           </ul>
         </div>
-      </nav>
+      </motion.nav>
     </header>
   )
 }

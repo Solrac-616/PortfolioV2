@@ -8,9 +8,21 @@
   overflow: hidden;
 }
 
-.banner-home h2
+.banner-content
 {
-  cursor: pointer;
+  width: 40%;
+}
+
+.banner-content .greeting
+{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.banner-content h2
+{
+  font-size: 65px;
+  font-weight: 800;
 }
 
 .banner-inset
@@ -29,6 +41,7 @@
 .typed-banner
 {
   display: flex;
+  font-size: 20px;
   gap: 7px;
 }
 
