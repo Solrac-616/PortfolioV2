@@ -8,9 +8,15 @@
   overflow: hidden;
 }
 
+.banner-home h2
+{
+  cursor: pointer;
+}
+
 .banner-inset
 {
   position: absolute;
+  pointer-events: none;
   top: 0;
   left: 0;
   bottom: 0;
@@ -50,6 +56,11 @@
   /* background-color: yellow; */
   border-radius: 50%;
   /* animation: circleA 24.18s ease-in-out infinite; */
+}
+
+.profession-box.circle-transitions
+{
+  transition: all 1.2s ease-in-out;
 }
 
 .profession-box .profession
@@ -101,6 +112,7 @@
   font-size: 30px;
   line-height: 1;
   font-weight: 600;
+  color: #212121;
 }
 
 .profession-box .circle
@@ -108,7 +120,7 @@
   width: 100%;
   height: 100%;
   /* background-color: rgba(0, 38, 255, 0.432); */
-  border: 2px solid #000000;
+  border: 4px solid #38bff8;
   border-radius: 50%;
 }
 

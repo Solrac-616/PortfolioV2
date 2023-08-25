@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
+// import useCircle from '../../Hooks/useCircle';
 // import Typed from 'react-typed';
 
 const Banner = () => {
-  const [rotate, setRotate] = useState("start");
+  // const { circleState, stateA, stateB, stateC, stateD} = useCircle();
+  const [angle, setAngle] = useState(0);
+  const [type, setType] = useState(true);
 
   return (
     <section id="bannerHome" className="banner-home">
@@ -22,74 +25,73 @@ const Banner = () => {
           /> */}
           <TypeAnimation
             sequence={[
+              () => {
+                setAngle(0);
+              },
               "Full-Stack Developer",
               1000,
               "How can we do?",
               1000,
               () => {
-                setRotate("React");
-                console.log('===============STATE=============');
-                console.log(rotate);
-                console.log('====================================');
+                setType(true);
+                setAngle(90);
               },
               "How can we do? React",
               1000,
               "How can we do? React - MERN?",
               1000,
               () => {
-                setRotate("Angular");
-                console.log('===============Rotate=============');
-                console.log(rotate);
-                console.log('====================================');
+                setAngle(180);
               },
               "How can we do? Angular",
               1000,
               "How can we do? Angular + Node?",
               1000,
               () => {
-                setRotate("Next");
-                console.log('===============Rotate=============');
-                console.log(rotate);
-                console.log('====================================');
+                setAngle(270);
               },
               "How can we do? Next",
               1000,
               "Alright",
               1000,
-              "Alright let's do it",
-              1000,
               () => {
-                setRotate("start");
-                console.log('===============Rotate=============');
-                console.log(rotate);
-                console.log('====================================');
+                setAngle(360);
+              },
+              "Alright let's do it",
+              2000,
+              () => {
+                setType(false);
               },
             ]}
             wrapper="span"
             speed={200}
-            deletionSpeed={100}
+            deletionSpeed={150}
             repeat={Infinity}
           />
         </div>
       </div>
       <div className="banner-inset">
-        
+
       </div>
       <div className="profession-container">
-        <div className="profession-box font-raleway">
-          <div className="profession" style={{"--i": 0}}>
+        <div className={`profession-box font-raleway ${type && "circle-transitions" } `}
+        style={{
+          transform: `rotate(-${angle}deg)`,
+        }}
+        >
+          <div className="profession">
             <i className="fa-solid fa-laptop-code"></i>
             <h3>Full-Stack Developer</h3>
           </div>
-          <div className="profession" style={{"--i": 1}}>
+          <div className="profession">
             <i className="fa-brands fa-js"></i>
             <h3>Next</h3>
           </div>
-          <div className="profession" style={{"--i": 2}}>
+          <div className="profession">
             <i className="fa-brands fa-angular"></i>
             <h3>Angular</h3>
           </div>
-          <div className="profession" style={{"--i": 3}}>
+          <div className="profession">
             <i className="fa-brands fa-react"></i>
             <h3>React</h3>
           </div>
