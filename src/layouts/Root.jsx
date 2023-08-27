@@ -26,7 +26,7 @@ const Root = () => {
         duration: 800,
         delay: 0,
         smooth: 'easeInOutQuart',
-        offset: 0
+        offset: -70
       });
     } else {
       scroll.scrollToTop({
