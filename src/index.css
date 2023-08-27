@@ -33,6 +33,10 @@ body
   font-family: 'Raleway', sans-serif;
 }
 
+.animate-h2
+{
+  line-height: 1;
+}
 
 .root-layout
 {

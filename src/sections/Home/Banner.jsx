@@ -2,21 +2,12 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { appear, fadeIn, slideInFade, staggerContainer } from '../../utils/motion';
-import Animatedtext from '../../components/Animatedtext';
-import { AnimateH2, TypingText } from '../../components/AnimateTitle';
+import { AnimateH2 } from '../../components/AnimateTitle';
 
 
 const Banner = () => {
   const [angle, setAngle] = useState(0);
   const [type, setType] = useState(true);
-
-  const container = {
-    visible: {
-      transition: {
-        staggerChildren: 0.025
-      }
-    }
-  };
 
   return (
     <motion.section 
@@ -28,19 +19,9 @@ const Banner = () => {
     >
       <div className="row-default-v1">
         <div className='banner-content'>
-          <div>
-            <AnimateH2 title="TITULO" textStyles=''/>
-            <TypingText title="TITULO" textStyles=''/>
-          </div>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={container}
-          >
-            <Animatedtext text="TEXTO" type="h2" key={1} />
-          </motion.div>
           <motion.p variants={fadeIn('right', 'tween', 0.3 , 0.5)} className='greeting font-montserrat'>Hi!! this is my</motion.p>
-          <motion.h2 variants={appear('tween', 0.5, 0.5)} className='font-raleway'>PORTFOLIO</motion.h2>
+          {/* <motion.h2 variants={appear('tween', 0.5, 0.5)} className='font-raleway'>PORTFOLIO</motion.h2> */}
+          <AnimateH2 title="PORTFOLIO" textStyles=''/>
           <motion.div variants={fadeIn('up', 'tween', 1 , 0.5)} className="typed-banner font-montserrat">
             <p>I&apos;m Carlos Brito</p>
             <TypeAnimation

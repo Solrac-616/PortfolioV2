@@ -1,10 +1,20 @@
+import { motion } from "framer-motion";
 import Images from "../../assets";
+import { AnimateH2 } from "../../components/AnimateTitle";
+import { staggerContainer } from "../../utils/motion";
 
 const About = () => {
   return (
-    <section id="about" className="about-section">
+    <motion.section 
+      id="about" 
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.5 }}
+      className="about-section"
+    >
       <div className="row-default-v1 font-raleway about-head">
-        <h2>ABOUT</h2>
+        <AnimateH2 title="ABOUT" textStyles=''/>
       </div>
       <div className="row-default-v1 about-content">
         <div className="about-picture">
@@ -21,7 +31,7 @@ const About = () => {
           
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
