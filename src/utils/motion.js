@@ -106,6 +106,32 @@ export const textVariant2 = {
   },
 };
 
+export const textVariant3 = {
+  hidden: {
+    y: "200%",
+  },
+  show: {
+    y: 0,
+    transition: {
+      duration: 0.85,
+      ease: [0.455, 0.03, 0.515, 0.955],
+    },
+  },
+};
+
+export const textVariant4 = {
+  hidden: {
+    color: "#0055FF",
+  },
+  show: {
+    color: "#FF0088",
+    transition: {
+      duration: 0.85,
+      ease: [0.455, 0.03, 0.515, 0.955],
+    },
+  },
+};
+
 export const fadeIn = (direction, type, delay, duration) => ({
   hidden: {
     x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,

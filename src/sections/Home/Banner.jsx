@@ -2,11 +2,21 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { appear, fadeIn, slideInFade, staggerContainer } from '../../utils/motion';
+import Animatedtext from '../../components/Animatedtext';
+import { AnimateH2, TypingText } from '../../components/AnimateTitle';
 
 
 const Banner = () => {
   const [angle, setAngle] = useState(0);
   const [type, setType] = useState(true);
+
+  const container = {
+    visible: {
+      transition: {
+        staggerChildren: 0.025
+      }
+    }
+  };
 
   return (
     <motion.section 
@@ -18,6 +28,17 @@ const Banner = () => {
     >
       <div className="row-default-v1">
         <div className='banner-content'>
+          <div>
+            <AnimateH2 title="TITULO" textStyles=''/>
+            <TypingText title="TITULO" textStyles=''/>
+          </div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={container}
+          >
+            <Animatedtext text="TEXTO" type="h2" key={1} />
+          </motion.div>
           <motion.p variants={fadeIn('right', 'tween', 0.3 , 0.5)} className='greeting font-montserrat'>Hi!! this is my</motion.p>
           <motion.h2 variants={appear('tween', 0.5, 0.5)} className='font-raleway'>PORTFOLIO</motion.h2>
           <motion.div variants={fadeIn('up', 'tween', 1 , 0.5)} className="typed-banner font-montserrat">
@@ -84,19 +105,19 @@ const Banner = () => {
           transform: `rotate(-${angle}deg)`,
         }}
         >
-          <div className="profession">
+          <div className="profession stack-icon">
             <i className="fa-solid fa-laptop-code"></i>
             <h3>Full-Stack Developer</h3>
           </div>
-          <div className="profession">
+          <div className="profession java-icon">
             <i className="fa-brands fa-js"></i>
             <h3>Next</h3>
           </div>
-          <div className="profession">
+          <div className="profession angular-icon">
             <i className="fa-brands fa-angular"></i>
             <h3>Angular</h3>
           </div>
-          <div className="profession">
+          <div className="profession react-icon">
             <i className="fa-brands fa-react"></i>
             <h3>React</h3>
           </div>
