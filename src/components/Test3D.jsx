@@ -13,7 +13,7 @@ const Test3D = () => {
           <mesh>
             {/* <shapeGeometry/> */}
             <boxGeometry args={[2,2,2]}/>
-            <meshStandardMaterial color="#38bff8" />
+            <meshStandardMaterial color="red" />
           </mesh>
         </Canvas>
       </div>

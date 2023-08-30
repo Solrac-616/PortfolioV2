@@ -233,6 +233,8 @@
 .picture-a,
 .picture-b
 {
+  position: absolute;
+  user-select: auto;
   max-height: 110px;
   animation: float 2.5s ease-in-out infinite;
 }

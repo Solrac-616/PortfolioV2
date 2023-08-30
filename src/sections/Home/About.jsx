@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import Images from "../../assets";
 import { AnimateH2 } from "../../components/AnimateTitle";
 import { staggerContainer } from "../../utils/motion";
+import { Canvas } from "@react-three/fiber";
+import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 
 const About = () => {
   return (
@@ -18,6 +20,19 @@ const About = () => {
       </div>
       <div className="row-default-v1 about-content">
         <div className="about-picture">
+          <Canvas camera={{fov: 25, position: [5, 5, 5]}}>
+            <OrbitControls enableZoom={false} autoRotate />
+            <ambientLight intensity={2} />
+            <directionalLight position={[5, 2, 1]} />
+            <Sphere args={[1, 100, 200]} scale={1}>
+              <MeshDistortMaterial 
+                color='#212121'
+                attach="material"
+                distort={0.5}
+                speed={2}
+              />
+            </Sphere>
+          </Canvas>
           <img src={Images.pictureA} alt="Developer" className="picture-a" /> 
           <img src={Images.pictureB} alt="Developer" className="picture-b" />
         </div>
