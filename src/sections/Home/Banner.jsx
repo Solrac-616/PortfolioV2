@@ -15,7 +15,8 @@ const Banner = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.6 }}
-      id="bannerHome" className="banner-home"
+      id="bannerHome" 
+      className="banner-home"
     >
       <div className="row-default-v1">
         <div className='banner-content'>

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+  position: relative;
 }
 
 .up,
@@ -18,11 +19,30 @@
   gap: 20px;
 }
 
+.socials-back
+{
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-back .back-icon
+{
+  font-size: 40px;
+}
+
 .card1,
 .card2,
 .card3,
 .card4
 {
+  text-decoration: none;
   display: flex;
   width: 150px;
   height: 150px;
@@ -90,7 +110,7 @@
 .card1:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: #cc39a4;
+  box-shadow: #25D36640 0px 2px 9px 0px, #25D3664d 0px 1px 5px 0px;
 }
 
 .card1:hover .whatsapp {
@@ -100,7 +120,7 @@
 .card2:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: #03A9F4;
+  box-shadow: #0e76a840 0px 2px 9px 0px, #0e76a84d 0px 1px 5px 0px;
 }
 
 .card2:hover .linkedin {
@@ -110,7 +130,7 @@
 .card3:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: black;
+  box-shadow: #38bff840 0px 2px 9px 0px, #38bff84d 0px 1px 5px 0px;
 }
 
 .card3:hover .github {
@@ -120,7 +140,7 @@
 .card4:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: #8c9eff;
+  box-shadow: #DB443740 0px 2px 9px 0px, #DB44374d 0px 1px 5px 0px;
 }
 
 .card4:hover .google {

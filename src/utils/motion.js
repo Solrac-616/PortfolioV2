@@ -151,6 +151,23 @@ export const fadeIn = (direction, type, delay, duration) => ({
   },
 });
 
+export const fadeInDual = (directionX, directionY, type, delay, duration) => ({
+  hidden: {
+    x: directionX === 'left' ? 100 : directionX === 'right' ? -100 : 0,
+    y: directionY === 'up' ? 100 : directionY === 'down' ? -100 : 0,
+  },
+  show: {
+    x: 0,
+    y: 0,
+    transition: {
+      type,
+      delay,
+      duration,
+      ease: 'easeIn',
+    },
+  },
+});
+
 export const appear = (type, delay, duration) => ({
   hidden: {
     opacity: 0,
@@ -166,6 +183,24 @@ export const appear = (type, delay, duration) => ({
   },
 });
 
+
+export const rotateA = () => ({
+  hidden: {
+    rotate: 0,
+    scale: 1,
+    opacity: 1,
+  },
+  show: {
+    rotate: 320,
+    scale: [1, 1.5, 1.2, 1, 0],
+    opacity: [1, 1, 1, 1, 1],
+    transition: {
+      type: 'spring',
+      duration: 1.5,
+      delay: 0.3,
+    },
+  },
+});
 export const planetVariants = (direction) => ({
   hidden: {
     x: direction === 'left' ? '-100%' : '100%',
@@ -190,6 +225,23 @@ export const zoomIn = (delay, duration) => ({
   show: {
     scale: 1,
     opacity: 1,
+    transition: {
+      type: 'tween',
+      delay,
+      duration,
+      ease: 'easeOut',
+    },
+  },
+});
+
+export const zoomOut = (delay, duration) => ({
+  hidden: {
+    scale: 1,
+    opacity: 1,
+  },
+  show: {
+    scale: 0,
+    opacity: 0,
     transition: {
       type: 'tween',
       delay,
