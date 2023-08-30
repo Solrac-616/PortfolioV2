@@ -65,7 +65,7 @@
 }
 
 .whatsapp {
-  color: #25D366;
+  color: #25d365;
   margin-bottom: 30%;
   margin-right: 30%;
 }
@@ -90,7 +90,7 @@
 }
 
 .github {
-  color: #171515;
+  color: #F1502F;
   margin-top: 30%;
   margin-right: 30%;
 }
@@ -130,7 +130,7 @@
 .card3:hover {
   cursor: pointer;
   scale: 1.1;
-  box-shadow: #38bff840 0px 2px 9px 0px, #38bff84d 0px 1px 5px 0px;
+  box-shadow: #F1502F40 0px 2px 9px 0px, #F1502F4d 0px 1px 5px 0px;
 }
 
 .card3:hover .github {
