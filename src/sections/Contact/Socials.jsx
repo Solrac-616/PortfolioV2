@@ -1,8 +1,9 @@
+import SocialsBtn from "../../components/SocialsBtn"
 
 const Socials = () => {
   return (
     <section id="socials" className="section-test">
-      <h2>SOCIALS</h2>
+      <SocialsBtn />
     </section>
   )
 }
