@@ -1,0 +1,37 @@
+.form-section
+{
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-section .row-default-v1
+{
+
+}
+
+.form-section form
+{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-section form input,
+.form-section form textarea
+{
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.custom-map-container
+{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  right: 0;
+}

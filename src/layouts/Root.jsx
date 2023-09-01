@@ -18,6 +18,9 @@ import Themebuttondual from '../components/themebuttondual';
 
 const Root = () => {
   const location = useLocation();
+  console.log('==============LOCATION==============');
+  console.log(location);
+  console.log('====================================');
 
   useEffect(() => {
     if (location.state && location.state.scrollTo) {
