@@ -2,9 +2,9 @@
 const WhatsApp = () => {
   return (
     <div className="whatsapp-wrapper">
-      <div className="whatsapp-button">
+      <a className="whatsapp-button"  href="https://wa.me/584123809750" target="_blank" rel="noreferrer">
         <i className="fa-brands fa-whatsapp"></i>
-      </div>
+      </a>
     </div>
   )
 }

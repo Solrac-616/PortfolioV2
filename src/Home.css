@@ -209,6 +209,7 @@
 .about-content
 {
   display: flex;
+  gap: 25px;
 }
 .about-content > div
 {
@@ -218,11 +219,18 @@
 
 .about-resume
 {
-  padding: 100px 0 100px 20px;
+  padding: 100px 0 100px 0px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow: hidden;
 }
+
+.about-resume p
+{
+  width: 80%;
+}
+
 .about-picture
 {
   display: flex;

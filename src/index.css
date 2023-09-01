@@ -343,6 +343,7 @@ header
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .whatsapp-button::before,
@@ -355,6 +356,7 @@ header
   border-radius: 50%;
   z-index: -1;
   background-color: #25D366;
+  pointer-events: none;
 }
 
 .whatsapp-button::before
