@@ -7,12 +7,17 @@ import MapTest from "../../components/MapTest"
 const Contactform = () => {
   return (
     <section id="contactForm" className="form-section" >
+      <div className="custom-map-container">
+        {/* <CustomMap /> */}
+        <MapTest />
+      </div>
+
       <motion.div 
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.6 }}
-        className="row-default-v1"
+        className="form-container"
       >
         <form action="">
           <AnimateH2 title="Contact me" textStyles=''/>
@@ -21,10 +26,7 @@ const Contactform = () => {
           <textarea placeholder="write a message." rows={10} ></textarea>
         </form>
       </motion.div>
-      <div className="custom-map-container">
-        {/* <CustomMap /> */}
-        <MapTest />
-      </div>
+      
     </section>
   )
 }

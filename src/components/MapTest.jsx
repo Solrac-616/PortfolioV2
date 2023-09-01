@@ -4,16 +4,9 @@ import {
   Geographies,
   Geography
 } from "react-simple-maps";
-
 const MapTest = () => {
   return (
-    <ComposableMap
-      projection="geoAzimuthalEqualArea"
-      projectionConfig={{
-        rotate: [50, 0, 0],
-        scale: 700
-      }}
-    >
+    <ComposableMap>
       <Geographies geography="/clipmap.json">
         {({ geographies }) =>
           geographies.map((geo) => (

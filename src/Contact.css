@@ -1,37 +1,81 @@
+.section-socials
+{
+  position: relative;
+}
+
+.back-img-absolute
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  opacity: 0;
+}
+
+.back-img-activate
+{
+  transition: all .5s;
+  opacity: 1 !important;
+}
+
 .form-section
 {
   min-height: 100vh;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
-.form-section .row-default-v1
+.form-container
 {
-
+  position: relative;
+  margin-left: 5%;
+  z-index: 1;
 }
 
 .form-section form
 {
+  padding: 20px;
+  background-color: #2121217a;
+  border-radius: 20px;
+  backdrop-filter: blur(2px);
   width: 500px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
+.form-section form h2
+{
+  text-align: center;
+}
+
 .form-section form input,
 .form-section form textarea
 {
-  padding: 20px;
+  color: #fff;
+  padding: 12px;
   border-radius: 6px;
+  background-color: #38bff8c2;
+}
+
+.form-section form input::placeholder,
+.form-section form textarea::placeholder
+{
+  color: #fff;
 }
 
 .custom-map-container
 {
   position: absolute;
   height: 100%;
-  width: 50%;
+  width: 100%;
   top: 0;
   right: 0;
 }
