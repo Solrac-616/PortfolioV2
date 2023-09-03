@@ -1,15 +1,12 @@
 import { motion } from "framer-motion"
 import { AnimateH2 } from "../../components/AnimateTitle"
 import { staggerContainer } from "../../utils/motion"
-import CustomMap from "../../components/CustomMap"
-import MapTest from "../../components/MapTest"
 
 const Contactform = () => {
   return (
     <section id="contactForm" className="form-section" >
       <div className="custom-map-container">
-        {/* <CustomMap /> */}
-        <MapTest />
+        
       </div>
 
       <motion.div 

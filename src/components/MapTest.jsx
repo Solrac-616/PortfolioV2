@@ -6,7 +6,15 @@ import {
 } from "react-simple-maps";
 const MapTest = () => {
   return (
-    <ComposableMap>
+    <ComposableMap
+      projection="geoMercator"
+      projectionConfig={{
+        rotate: [0, 0, 0],
+        center: [-66.3, -11.6],
+        scale: 865
+      }}
+      style={{width: '100%', height: '100%'}}
+    >
       <Geographies geography="/clipmap.json">
         {({ geographies }) =>
           geographies.map((geo) => (
