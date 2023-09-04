@@ -5,9 +5,10 @@ import Customlink from './Customlink';
 import Images from '../assets';
 import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer, zoomIn } from '../utils/motion';
+import useNavbar from '../Hooks/useNavbar';
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
+  const { navState, renewNav } = useNavbar();
 
   // DETECCION DE SCROLL PARA EL NAVBAR
   const [scrolled, setScrolled] = useState(false);
@@ -49,8 +50,8 @@ const Navbar = () => {
                 <Customlink
                 id={item.id}
                 scrollId={item.scrollId}
-                active={active === item.id}
-                onclick={()=>setActive(item.id)}
+                active={navState === item.name}
+                onclick={()=>renewNav(item.name)}
                 title={item.title}
                 />
               </motion.li>

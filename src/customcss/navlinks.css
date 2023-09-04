@@ -8,7 +8,9 @@
   color: #fff;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active
+{
   background: #38bff8;
   color: #38bff8;
   box-shadow: 0 0 45px #38bff8;
@@ -46,7 +48,9 @@
   transition: 0.5s;
 }
 
-.nav-link:hover i::before {
+.nav-link:hover i::before,
+.nav-link.active i::before
+{
   width: 20px;
   left: 20%;
 }
@@ -64,7 +68,9 @@
   transition: 0.5s;
 }
 
-.nav-link:hover i::after {
+.nav-link:hover i::after,
+.nav-link.active i::after
+{
   width: 20px;
   left: 80%;
 }
