@@ -9,13 +9,13 @@ export const navLinks = [
   },
   {
     id: "/",
-    name: "about",
+    name: "resume",
     scrollId: "about",
     title: "About",
   },
   {
       id: "/",
-      name: "skills",
+      name: "skill",
       scrollId: "skills",
       title: "Skills",
   },

@@ -17,7 +17,7 @@ const About = () => {
       className="about-section"
     >
       <div className="row-default-v1 font-raleway about-head">
-        <AnimateH2 title="ABOUT" textStyles='observe' name="about" />
+        <AnimateH2 title="ABOUT" textStyles='observe' id="resume" />
       </div>
       <div className="row-default-v1 about-content">
         <div className="about-picture">

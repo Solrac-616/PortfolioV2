@@ -20,7 +20,7 @@ const Skills = () => {
 
   return (
     <section ref={ref} id="skills" className="section-test">
-      <h2 data-name="skills" key="skills" className="observe" >SKILLS</h2>
+      <h2 data-name="skills" key="skills" className="" >SKILLS</h2>
     </section>
   )
 }

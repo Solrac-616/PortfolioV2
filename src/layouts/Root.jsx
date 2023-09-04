@@ -14,13 +14,13 @@ import { useLocation } from 'react-router-dom';
 import { animateScroll as scroll, scroller } from 'react-scroll';
 
 import 'react-creative-cursor/dist/styles.css';
-import Themebuttondual from '../components/themebuttondual';
+import Themebuttondual from '../components/Themebuttondual';
 
 const Root = () => {
   const location = useLocation();
-  console.log('==============LOCATION==============');
-  console.log(location);
-  console.log('====================================');
+  // console.log('==============LOCATION==============');
+  // console.log(location);
+  // console.log('====================================');
 
   useEffect(() => {
     if (location.state && location.state.scrollTo) {
