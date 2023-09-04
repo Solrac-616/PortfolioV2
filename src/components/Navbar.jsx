@@ -55,7 +55,8 @@ const Navbar = () => {
                 <Customlink
                 id={item.id}
                 scrollId={item.scrollId}
-                active={active === item.name}
+                name={item.name}
+                active={active}
                 onclick={()=>renewNav(item.name)}
                 title={item.title}
                 />

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Images from "../../assets";
 import { AnimateH2 } from "../../components/AnimateTitle";
@@ -5,7 +6,24 @@ import { appear, slideIn, staggerContainer } from "../../utils/motion";
 import { Canvas } from "@react-three/fiber";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 
+import useNavbar from "../../Hooks/useNavbar";
+import { useInView } from "react-intersection-observer";
+
 const About = () => {
+  const { navState, renewNav } = useNavbar();
+
+  const { ref, inView } = useInView({
+    /* Optional options */
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      renewNav("about");
+      console.log('=============INVIEWSKILLS===============');
+      console.log(navState);
+    }
+  }, [inView, navState, renewNav])
 
   return (
     <motion.section 
@@ -16,7 +34,7 @@ const About = () => {
       viewport={{ once: false, amount: 0.5 }}
       className="about-section"
     >
-      <div className="row-default-v1 font-raleway about-head">
+      <div className="row-default-v1 font-raleway about-head" ref={ref}>
         <AnimateH2 title="ABOUT" textStyles='observe' id="resume" />
       </div>
       <div className="row-default-v1 about-content">

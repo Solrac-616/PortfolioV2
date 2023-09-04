@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const useNavbar = () => {
-  const [navState, setNavState] = useState('hero');
+  const [navState, setNavState] = useState('');
 
   const renewNav = (renew) => {
     setNavState(renew);
