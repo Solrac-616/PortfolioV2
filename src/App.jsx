@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route, Navigate } from "react-router-dom";
 
 import './App.css'
@@ -13,6 +14,19 @@ import Contact from "./pages/Contact";
 
 
 function App() {
+
+  useEffect(() => {
+    const targetSections = document.querySelectorAll("observe");
+
+    const observer = new IntersectionObserver((entries) => {
+      console.log(entries);
+    });
+
+    targetSections.forEach((section) => {
+      observer.observe(section);
+    });
+  }, []);
+
   const router = createBrowserRouter(
 
     createRoutesFromElements(

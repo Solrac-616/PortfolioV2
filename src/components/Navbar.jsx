@@ -9,6 +9,7 @@ import useNavbar from '../Hooks/useNavbar';
 
 const Navbar = () => {
   const { navState, renewNav } = useNavbar();
+  const [active, setActive] = useState( navState ? navState : 'hero');
 
   // DETECCION DE SCROLL PARA EL NAVBAR
   const [scrolled, setScrolled] = useState(false);
@@ -28,6 +29,10 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    setActive(navState);
+  }, [navState])
 
   return (
     <header>
@@ -50,7 +55,8 @@ const Navbar = () => {
                 <Customlink
                 id={item.id}
                 scrollId={item.scrollId}
-                active={navState === item.name}
+                active={false}
+                // active={active === item.name}
                 onclick={()=>renewNav(item.name)}
                 title={item.title}
                 />

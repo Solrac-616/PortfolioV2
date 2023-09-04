@@ -14,11 +14,12 @@ export const TypingText = ({ title, textStyles }) => (
   </motion.p>
 );
 
-export const AnimateH2 = ({ title, textStyles }) => (
+export const AnimateH2 = ({ title, textStyles, name }) => (
   <h2 className='animate-h2 font-raleway'>
     <motion.div
       variants={textContainer}
       className={`${textStyles}`}
+      data-name={name}
       style={{
         overflow: "hidden",
         display: "inline-block"
