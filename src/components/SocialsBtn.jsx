@@ -3,7 +3,7 @@ import '../customcss/socialsbtn.css'
 import { fadeInDual, rotateA, staggerContainer } from '../utils/motion'
 
 const SocialsBtn = (props) => {
-  const { showWhatsapp } = props
+  const { showWhatsapp, showLinkedin, showGithub, showGmail } = props
 
   return (
     <>
@@ -30,15 +30,15 @@ const SocialsBtn = (props) => {
           <motion.a onMouseEnter={showWhatsapp} title='whatsapp' data-cursor-color="#25d36569" variants={fadeInDual('right', 'down', 'spring', 0.3 , 1)} href="https://wa.me/584123809750" target="_blank" rel="noreferrer" className="socials-btn-card card1">
             <i className="fa-brands fa-whatsapp whatsapp"></i>
           </motion.a>
-          <motion.a title='linkedin' data-cursor-color="#0e76a869" variants={fadeInDual('left', 'down', 'spring', 0.5 , 1)} href="https://www.linkedin.com/in/carlos-brito-carrero/" target="_blank" rel="noreferrer" className="socials-btn-card card2">
+          <motion.a onMouseEnter={showLinkedin} title='linkedin' data-cursor-color="#0e76a869" variants={fadeInDual('left', 'down', 'spring', 0.5 , 1)} href="https://www.linkedin.com/in/carlos-brito-carrero/" target="_blank" rel="noreferrer" className="socials-btn-card card2">
             <i className="fa-brands fa-linkedin linkedin"></i>
           </motion.a>
         </div>
         <div className="down">
-          <motion.a title='github' data-cursor-color="#F1502F69" variants={fadeInDual('right', 'up', 'spring', 0.9 , 1)} href="https://github.com/Solrac-616" target="_blank" rel="noreferrer" className="socials-btn-card card3">
+          <motion.a onMouseEnter={showGithub} title='github' data-cursor-color="#F1502F69" variants={fadeInDual('right', 'up', 'spring', 0.9 , 1)} href="https://github.com/Solrac-616" target="_blank" rel="noreferrer" className="socials-btn-card card3">
             <i className="fa-brands fa-github github"></i>
           </motion.a>
-          <motion.a title='gmail' data-cursor-color="#DB443769" variants={fadeInDual('left', 'up', 'spring', 0.7 , 1)} href="mailto:carlos.e1998g@gmail.com" target="_blank" rel="noreferrer" className="socials-btn-card card4">
+          <motion.a onMouseEnter={showGmail} title='gmail' data-cursor-color="#DB443769" variants={fadeInDual('left', 'up', 'spring', 0.7 , 1)} href="mailto:carlos.e1998g@gmail.com" target="_blank" rel="noreferrer" className="socials-btn-card card4">
             <i className="fa-brands fa-google google"></i>
           </motion.a>
         </div>

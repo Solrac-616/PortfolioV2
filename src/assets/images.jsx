@@ -6,6 +6,10 @@ import pictureB from "./images/png/picture_b.png";
 
 // WEBP
 import whatsapp from "./images/webp/whatsapp.webp";
+import linkedin from "./images/webp/linkedin.webp";
+import github1 from "./images/webp/github1.webp";
+import github2 from "./images/webp/github2.webp";
+import gmail from "./images/webp/gmail.webp";
 
 export default{
     about,
@@ -13,5 +17,9 @@ export default{
     logoA,
     pictureA,
     pictureB,
-    whatsapp
+    whatsapp,
+    linkedin,
+    github1,
+    github2,
+    gmail
 };
