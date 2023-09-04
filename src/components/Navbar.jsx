@@ -15,7 +15,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   // HOOK PARA DETECTAR EL SCROLL
   useEffect(() => {
-    const handleScroll = () => {
+    const skillScroll = () => {
       const scrollTop = window.scrollY;
       //console.log(scrollTop);
       if (scrollTop > 80) {
@@ -25,9 +25,9 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", skillScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", skillScroll);
   }, []);
 
   useEffect(() => {
