@@ -28,18 +28,16 @@ const Skills = () => {
     <section id="skills" className="section-skills">
       
       <div className="row-default-v1 skills-head">
-        <NavObserver name="skill">
-          <h2 data-name="skills" key="skills" className="" >SKILLS</h2>
-        </NavObserver>
+        <h2 data-name="skills" key="skills" className="" >SKILLS</h2>
       </div>
 
-      <div className="row-default-v1 skills-grid">
+      <NavObserver name="skill" stringClass="row-default-v1 skills-grid" config={0.3}>
         {skills.map((item) => (
           <div className="skill-item" key={item.id}> 
             <h3 style={{ backgroundColor: `${item.color}` }}>{item.name}</h3>
           </div>
         ))}
-      </div>
+      </NavObserver>
     </section>
   )
 }

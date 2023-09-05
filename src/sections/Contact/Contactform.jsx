@@ -18,7 +18,7 @@ const Contactform = () => {
         className="form-container"
       >
         <form action="">
-          <NavObserver name="form">
+          <NavObserver name="form" config={0.5}>
             <AnimateH2 title="Contact me" textStyles=''/>
           </NavObserver>
           <input type="text" placeholder="Name" />

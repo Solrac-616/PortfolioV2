@@ -23,9 +23,7 @@ const Banner = () => {
         <div className='banner-content'>
           <motion.p variants={fadeIn('right', 'tween', 0.3 , 0.5)} className='greeting font-montserrat'>Hi!! this is my</motion.p>
           {/* <motion.h2 variants={appear('tween', 0.5, 0.5)} className='font-raleway'>PORTFOLIO</motion.h2> */}
-          <NavObserver name="hero">
-            <AnimateH2 title="PORTFOLIO" textStyles='observe' id="hero" />
-          </NavObserver>
+          <AnimateH2 title="PORTFOLIO" textStyles='observe' id="hero" />
           <motion.div variants={fadeIn('up', 'tween', 1 , 0.5)} className="typed-banner font-montserrat">
             <p>I&apos;m Carlos Brito</p>
             <TypeAnimation
@@ -84,7 +82,7 @@ const Banner = () => {
       <div className="banner-inset">
 
       </div>
-      <div className="profession-container">
+      <NavObserver name="hero" stringClass="profession-container" config={0.5}>
         <motion.div variants={appear('tween', 1, 0.6)} className={`profession-box font-raleway ${type && "circle-transitions" } `}
         style={{
           transform: `rotate(-${angle}deg)`,
@@ -113,7 +111,8 @@ const Banner = () => {
         <motion.div variants={slideInFade('right', 'tween', 0.5, 0.6)} className="overlay">
           <div className="figure"></div>
         </motion.div>
-      </div>
+      
+      </NavObserver>
     </motion.section>
   )
 }

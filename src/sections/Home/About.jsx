@@ -19,9 +19,7 @@ const About = () => {
       className="about-section"
     >
       <div className="row-default-v1 font-raleway about-head">
-        <NavObserver name="resume">
-          <AnimateH2 title="ABOUT" textStyles='observe' id="resume" />
-        </NavObserver>
+        <AnimateH2 title="ABOUT" textStyles='observe' id="resume" />
       </div>
       <div className="row-default-v1 about-content">
         <div className="about-picture">
@@ -63,15 +61,14 @@ const About = () => {
           <motion.img variants={appear('tween', 0.4, 1.5)} src={Images.pictureA} alt="Developer" className="picture-a" /> 
           
         </div>
-        <div className="about-resume font-montserrat">
+        <NavObserver name="resume" stringClass="about-resume font-montserrat" config={0.5}>
           <motion.p variants={slideIn( 'left', 'tween', 0.3, 0.6)}>
             Venezuelan graduated with a mention in Electronic Technology, with more than 2 years of professional work experience developing Frontend and Backend projects using Wordpress, Divi, Elementor, React, Next, NodeJs, Github, MySql, MongoSB, Tailwind, Bootstrap and Laravel. Expert of HTML, CSS and Javascript, outstanding in PHP, Typescript, C++ and assembler. Experienced in projects such as Frontend layout, Api RESTful, Ecommerce and online learning.
           </motion.p>
           <motion.p variants={slideIn( 'left', 'tween', 0.5, 0.6)}>
             My outstanding soft skills are: self-development, negotiation, attention to detail, listening skills, composure, teamwork, self-awareness, creativity, conflict management, customer orientation, perseverance, problem solving, and analytical-critical thinking.
           </motion.p>
-          
-        </div>
+        </NavObserver>
       </div>
     </motion.section>
   )

@@ -21,7 +21,7 @@ const Socials = () => {
       <BackImage img={Images.linkedin} show={backShow === "linkedin"} />
       <BackImage img={Images.github1} show={backShow === "github"} />
       <BackImage img={Images.gmail} show={backShow === "gmail"} />
-      <NavObserver name="socials">
+      <NavObserver name="socials" config={0.4}>
         <SocialsBtn 
           reset={resetShow}
           showWhatsapp={() => handleBack("whatsapp")}
