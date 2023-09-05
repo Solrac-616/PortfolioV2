@@ -19,7 +19,7 @@ const About = () => {
       className="about-section"
     >
       <div className="row-default-v1 font-raleway about-head">
-        <NavObserver name="about">
+        <NavObserver name="resume">
           <AnimateH2 title="ABOUT" textStyles='observe' id="resume" />
         </NavObserver>
       </div>

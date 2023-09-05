@@ -11,10 +11,10 @@ export const loadSlice = createSlice({
     name: 'load',
     initialState: initialState,
     reducers: {
-        setNavState: (state, action) => {
+        setLoader: (state, action) => {
           state.loadState = action.payload;
         },
-        setMessage: (state, action) => {
+        setMessageLoader: (state, action) => {
           state.message = action.payload;
         },
     },
@@ -26,4 +26,4 @@ export const loadSlice = createSlice({
 
 export default loadSlice.reducer;
 
-export const { setNavState, setMessage } = loadSlice.actions
+export const { setLoader, setMessageLoader } = loadSlice.actions

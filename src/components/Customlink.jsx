@@ -1,18 +1,17 @@
 import { Link } from 'react-router-dom';
-import useNavbar from '../Hooks/useNavbar';
 import { useEffect, useState } from 'react';
+
+import { useSelector  } from 'react-redux';
 
 const Customlink = (props) => {
   
   const { id, title, onclick, name, scrollId } = props;
   const [active, setActive] = useState('');
-  const { navState } = useNavbar();
+
+  const { navState } = useSelector(state => state.nav);
 
   useEffect(() => {
     setActive(navState);
-    console.log('==============estado===============');
-    console.log(navState);
-    console.log('====================================');
   }, [navState])
 
   return (

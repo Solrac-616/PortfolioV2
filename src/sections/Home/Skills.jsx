@@ -28,7 +28,7 @@ const Skills = () => {
     <section id="skills" className="section-skills">
       
       <div className="row-default-v1 skills-head">
-        <NavObserver name="skills">
+        <NavObserver name="skill">
           <h2 data-name="skills" key="skills" className="" >SKILLS</h2>
         </NavObserver>
       </div>
