@@ -2,10 +2,10 @@ import Images from "../assets";
 
 export const navLinks = [
   {
-      id: "/",
-      name: "hero",
-      scrollId: false,
-      title: "Home",
+    id: "/",
+    name: "hero",
+    scrollId: false,
+    title: "Home",
   },
   {
     id: "/",
@@ -14,22 +14,22 @@ export const navLinks = [
     title: "About",
   },
   {
-      id: "/",
-      name: "skill",
-      scrollId: "skills",
-      title: "Skills",
+    id: "/",
+    name: "skill",
+    scrollId: "skills",
+    title: "Skills",
   },
   {
-      id: "contact",
-      name: "socials",
-      scrollId: false,
-      title: "Contact",
+    id: "contact",
+    name: "socials",
+    scrollId: false,
+    title: "Contact",
   },
   {
-      id: "contact",
-      name: "form",
-      scrollId: "contactForm",
-      title: "Send Mail",
+    id: "contact",
+    name: "form",
+    scrollId: "contactForm",
+    title: "Send Mail",
   },
 ];
 

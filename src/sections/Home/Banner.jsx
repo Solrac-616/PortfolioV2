@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { appear, fadeIn, slideInFade, staggerContainer } from '../../utils/motion';
 import { AnimateH2 } from '../../components/AnimateTitle';
+import NavObserver from '../../components/NavObserver';
 
 
 const Banner = () => {
@@ -22,7 +23,9 @@ const Banner = () => {
         <div className='banner-content'>
           <motion.p variants={fadeIn('right', 'tween', 0.3 , 0.5)} className='greeting font-montserrat'>Hi!! this is my</motion.p>
           {/* <motion.h2 variants={appear('tween', 0.5, 0.5)} className='font-raleway'>PORTFOLIO</motion.h2> */}
-          <AnimateH2 title="PORTFOLIO" textStyles='observe' id="hero" />
+          <NavObserver name="hero">
+            <AnimateH2 title="PORTFOLIO" textStyles='observe' id="hero" />
+          </NavObserver>
           <motion.div variants={fadeIn('up', 'tween', 1 , 0.5)} className="typed-banner font-montserrat">
             <p>I&apos;m Carlos Brito</p>
             <TypeAnimation
