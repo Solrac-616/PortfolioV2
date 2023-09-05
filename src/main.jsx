@@ -5,8 +5,13 @@ import './index.css'
 import './loader.css'
 import './customcss/navlinks.css'
 
+import store from './store/store'
+import { Provider } from 'react-redux'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
 )

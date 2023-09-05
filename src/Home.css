@@ -339,8 +339,9 @@
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  transition: all .5s ease-out;
 }
-/* 
+
 .skills-grid .skill-item:nth-child(3n+1) h3
 {
   transform: translate(-300px, 0) scale(0);
@@ -360,4 +361,4 @@
 .skills-grid .skill-item.active h3
 {
   transform: translate(0, 0) scale(1) !important;
-} */
+}

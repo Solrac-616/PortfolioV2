@@ -1,19 +1,12 @@
 import { useEffect } from "react";
-import useNavbar from "../../Hooks/useNavbar";
-import { useInView } from "react-intersection-observer";
 import { skills } from "../../constants";
+import NavObserver from "../../components/NavObserver";
 
 const Skills = () => {
-  const { navState, renewNav } = useNavbar();
-
-  const { ref, inView } = useInView({
-    /* Optional options */
-    threshold: 0.5,
-  });
-
-  let itemsSkills = document.querySelectorAll(".skill-item");
 
   useEffect(() => {
+    let itemsSkills = document.querySelectorAll(".skill-item");
+
     const handleScroll = () => {
 
       itemsSkills.forEach(box => {
@@ -31,20 +24,13 @@ const Skills = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (inView) {
-      renewNav("skill");
-      console.log('=============INVIEWSKILLS===============');
-      console.log(inView);
-    }
-
-  }, [inView, navState, renewNav])
-
   return (
-    <section ref={ref} id="skills" className="section-skills">
+    <section id="skills" className="section-skills">
       
       <div className="row-default-v1 skills-head">
-        <h2 data-name="skills" key="skills" className="" >SKILLS</h2>
+        <NavObserver name="skills">
+          <h2 data-name="skills" key="skills" className="" >SKILLS</h2>
+        </NavObserver>
       </div>
 
       <div className="row-default-v1 skills-grid">
