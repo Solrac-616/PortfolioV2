@@ -11,15 +11,17 @@ import video from "../../assets/video/about.mp4"
 const About = () => {
 
   return (
-    <motion.section 
+    <section 
       id="about" 
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.5 }}
       className="about-section"
     >
-      <div className="row-default-v2 font-raleway about-head">
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.5 }}
+        className="row-default-v2 font-raleway about-head"
+      >
 
         <video autoPlay muted loop={true} controls={false}>
           <source src={video} type="video/mp4" />
@@ -28,8 +30,14 @@ const About = () => {
         <div className="back-blur"></div>
 
         <AnimateH2 title="ABOUT" textStyles='observe' id="resume" />
-      </div>
-      <div className="row-default-v1 about-content">
+      </motion.div>
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.5 }}
+        className="row-default-v1 about-content"
+      >
         <div className="about-picture">
           <div className="sphere-black">
             <Canvas camera={{fov: 25, position: [5, 5, 5]}}>
@@ -77,8 +85,8 @@ const About = () => {
             My outstanding soft skills are: self-development, negotiation, attention to detail, listening skills, composure, teamwork, self-awareness, creativity, conflict management, customer orientation, perseverance, problem solving, and analytical-critical thinking.
           </motion.p>
         </NavObserver>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   )
 }
 
