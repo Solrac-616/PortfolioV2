@@ -33,8 +33,10 @@ const Skills = () => {
 
       <NavObserver name="skill" stringClass="row-default-v1 skills-grid" config={0.3}>
         {skills.map((item) => (
-          <div className="skill-item" key={item.id}> 
-            <h3 style={{ backgroundColor: `${item.color}` }}>{item.name}</h3>
+          <div className="skill-item" data-cursor-text={item.name} data-cursor-size="90px" key={item.id}> 
+            <div className="skill">
+              <img src={item.img} alt={item.name} />
+            </div>
           </div>
         ))}
       </NavObserver>
