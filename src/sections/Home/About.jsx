@@ -6,6 +6,7 @@ import { Canvas } from "@react-three/fiber";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import NavObserver from "../../components/NavObserver";
 
+import video from "../../assets/video/about.mp4"
 
 const About = () => {
 
@@ -18,7 +19,14 @@ const About = () => {
       viewport={{ once: false, amount: 0.5 }}
       className="about-section"
     >
-      <div className="row-default-v1 font-raleway about-head">
+      <div className="row-default-v2 font-raleway about-head">
+
+        <video autoPlay muted loop={true} controls={false}>
+          <source src={video} type="video/mp4" />
+        </video>
+
+        <div className="back-blur"></div>
+
         <AnimateH2 title="ABOUT" textStyles='observe' id="resume" />
       </div>
       <div className="row-default-v1 about-content">

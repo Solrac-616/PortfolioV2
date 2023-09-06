@@ -1,3 +1,28 @@
+.skills-head video,
+.about-head  video
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.back-blur
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #111111d4;
+  backdrop-filter: blur(2px);
+}
+
+/*------------------BANNER*/
+
 .banner-home
 {
   position: relative;
@@ -197,13 +222,24 @@
 /*            ---- ABOUT*/
 .about-section
 {
-  padding: 100px 0 30px 0;
+  padding: 0px 0 30px 0;
+}
+
+.about-head 
+{
+  text-align: center;
+  font-size: 65px;
+  position: relative;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 
 .about-head h2
 {
-  text-align: center;
   font-size: 65px;
+  color: #ffffff;
 }
 
 .about-content
@@ -307,7 +343,7 @@
 
 .section-skills
 {
-  padding: 40px 0;
+  padding: 0px 0 40px 0;
   height: 200vh;
 }
 
@@ -315,32 +351,10 @@
 {
   position: relative;
   text-align: center;
-  height: 300px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: end;
-}
-
-.skills-head video
-{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.skills-head .back-blur
-{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #111111d4;
-  backdrop-filter: blur(2px);
 }
 
 .skills-head h2
