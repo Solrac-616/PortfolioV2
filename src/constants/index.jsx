@@ -38,109 +38,109 @@ const skills =
   {
     id: 1,
     name: "React",
-    color: "#61DBFB",
+    color: "#61DBFBBF",
     img: Images.react2
   },
   {
     id: 2,
     name: "Nodejs",
-    color: "#3c873a",
+    color: "#3c873aBF",
     img: Images.node
   },
   {
     id: 3,
     name: "HTML",
-    color: "#e34c26",
+    color: "#e34c26BF",
     img: Images.html
   },
   {
     id: 4,
     name: "CSS",
-    color: "#2965f1",
+    color: "#2965f1BF",
     img: Images.css
   },
   {
     id: 5,
     name: "Javascript",
-    color: "#f0db4f",
+    color: "#f0db4fBF",
     img: Images.javascript
   },
   {
     id: 6,
     name: "Github",
-    color: "#F1502F",
+    color: "#F1502FBF",
     img: Images.git
   },
   {
     id: 7,
     name: "Tailwind",
-    color: "#a5f3fc",
+    color: "#06b6d4BF",
     img: Images.tailwind
   },
   {
     id: 8,
     name: "typescript",
-    color: "#007ACC",
+    color: "#007ACCBF",
     img: Images.typescript
   },
   {
     id: 9,
     name: "Axios",
-    color: "#a166ff",
+    color: "#a166ffBF",
     img: Images.axios
   },
   {
     id: 10,
     name: "Redux",
-    color: "#764abc",
+    color: "#764abcBF",
     img: Images.redux
   },
   {
     id: 11,
     name: "Angular",
-    color: "#B52E31",
+    color: "#B52E31BF",
     img: Images.angular
   },
   {
     id: 12,
     name: "WordPress",
-    color: "#B52E31",
+    color: "#21759BBF",
     img: Images.wordpress
   },
   {
     id: 13,
     name: "Bootstrap",
-    color: "#B52E31",
+    color: "#553C7BBF",
     img: Images.bootstrap
   },
   {
     id: 14,
     name: "MongoDB",
-    color: "#B52E31",
+    color: "#4DB33DBF",
     img: Images.mongo
   },
   {
     id: 15,
     name: "MySQL",
-    color: "#B52E31",
+    color: "#00758FBF",
     img: Images.mysql
   },
   {
     id: 16,
     name: "Next",
-    color: "#B52E31",
+    color: "#78C239BF",
     img: Images.next
   },
   {
     id: 17,
     name: "Express",
-    color: "#B52E31",
+    color: "#000000BF",
     img: Images.express
   },
   {
     id: 18,
     name: "Sequelize",
-    color: "#B52E31",
+    color: "#06AFEFBF",
     img: Images.sequelize
   },
 ]

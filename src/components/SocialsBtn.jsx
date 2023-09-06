@@ -27,18 +27,18 @@ const SocialsBtn = (props) => {
           </motion.div>
         </div>
         <div className="up">
-          <motion.a onMouseEnter={showWhatsapp} data-cursor-text="whatsapp" title='+58 412 3809750' data-cursor-color="#25d36569" variants={fadeInDual('right', 'down', 'spring', 0.3 , 1)} href="https://wa.me/584123809750" target="_blank" rel="noreferrer" className="socials-btn-card card1">
+          <motion.a onMouseEnter={showWhatsapp} data-cursor-size="70px" data-cursor-text="whatsapp" title='+58 412 3809750' data-cursor-color="#25d36569" variants={fadeInDual('right', 'down', 'spring', 0.3 , 1)} href="https://wa.me/584123809750" target="_blank" rel="noreferrer" className="socials-btn-card card1">
             <i className="fa-brands fa-whatsapp whatsapp"></i>
           </motion.a>
-          <motion.a onMouseEnter={showLinkedin} data-cursor-text="Linkedin" title='Carlos Brito' data-cursor-color="#0e76a869" variants={fadeInDual('left', 'down', 'spring', 0.5 , 1)} href="https://www.linkedin.com/in/carlos-brito-carrero/" target="_blank" rel="noreferrer" className="socials-btn-card card2">
+          <motion.a onMouseEnter={showLinkedin} data-cursor-size="70px" data-cursor-text="Linkedin" title='Carlos Brito' data-cursor-color="#0e76a869" variants={fadeInDual('left', 'down', 'spring', 0.5 , 1)} href="https://www.linkedin.com/in/carlos-brito-carrero/" target="_blank" rel="noreferrer" className="socials-btn-card card2">
             <i className="fa-brands fa-linkedin linkedin"></i>
           </motion.a>
         </div>
         <div className="down">
-          <motion.a onMouseEnter={showGithub} data-cursor-text="GitHub" title='CarlosEBC' data-cursor-color="#F1502F69" variants={fadeInDual('right', 'up', 'spring', 0.9 , 1)} href="https://github.com/Solrac-616" target="_blank" rel="noreferrer" className="socials-btn-card card3">
+          <motion.a onMouseEnter={showGithub} data-cursor-size="70px" data-cursor-text="GitHub" title='CarlosEBC' data-cursor-color="#F1502F69" variants={fadeInDual('right', 'up', 'spring', 0.9 , 1)} href="https://github.com/Solrac-616" target="_blank" rel="noreferrer" className="socials-btn-card card3">
             <i className="fa-brands fa-github github"></i>
           </motion.a>
-          <motion.a onMouseEnter={showGmail} data-cursor-text="Gmail" title='carlos.e1998g@gmail.com' data-cursor-color="#DB443769" variants={fadeInDual('left', 'up', 'spring', 0.7 , 1)} href="mailto:carlos.e1998g@gmail.com" target="_blank" rel="noreferrer" className="socials-btn-card card4">
+          <motion.a onMouseEnter={showGmail} data-cursor-size="70px" data-cursor-text="Gmail" title='carlos.e1998g@gmail.com' data-cursor-color="#DB443769" variants={fadeInDual('left', 'up', 'spring', 0.7 , 1)} href="mailto:carlos.e1998g@gmail.com" target="_blank" rel="noreferrer" className="socials-btn-card card4">
             <i className="fa-brands fa-google google"></i>
           </motion.a>
         </div>
