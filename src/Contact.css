@@ -30,7 +30,111 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  background-color: #0f0f0f;
+  /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(33,33,33,1) 100%);
+  background-repeat: no-repeat;
+  background-size: cover; */
+  overflow: hidden;
 }
+
+/*----------------------- SCENE STYLES */
+.scene-wrapper
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.scene-wrapper #scene
+{
+  height: 100%;
+  width: 100%;
+}
+
+/*----------------------- SCENE  EARTH STYLES */
+
+/* .scene-wrapper #scene .layer
+{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: end;
+}
+
+.scene-wrapper #scene .layer:nth-child(1)
+{
+  opacity: .4;
+}
+
+.scene-wrapper #scene .layer img
+{
+  filter: brightness(2);
+}
+
+.scene-wrapper #scene .layer:nth-child(2) img,
+.scene-wrapper #scene .layer:nth-child(3) img
+{
+  width: 100%;
+}
+
+.scene-wrapper #scene .layer:nth-child(2)
+{
+  opacity: .5;
+}
+.scene-wrapper #scene .layer:nth-child(3)
+{
+  opacity: .3;
+}
+
+.scene-wrapper #scene .layer:nth-child(4)
+{
+}
+.scene-wrapper #scene .layer:nth-child(5)
+{
+  opacity: .2;
+} */
+
+
+/* SCENE PERSON FUTURIS */
+
+.scene-wrapper #scene .layer
+{
+  position: absolute !important;
+  inset: 0;
+  display: flex;
+  justify-content: end;
+}
+
+
+.scene-wrapper #scene .layer .img-scene
+{
+  height: 100%;
+}
+
+.scene-wrapper #scene .layer .img-scene img
+{
+  height: 100%;
+  right: 0;
+  position: absolute;
+}
+.scene-wrapper #scene .layer:nth-child(3) img
+{
+  width: 100%;
+}
+.scene-wrapper #scene .layer:nth-child(1) img,
+.scene-wrapper #scene .layer:nth-child(2) img
+{
+  transform: scaleX(-1);
+}
+
+.scene-wrapper #scene .layer:nth-child(2) img
+{
+  opacity: .3;
+}
+
+/*----------------------- SCENE STYLES */
 
 .form-container
 {

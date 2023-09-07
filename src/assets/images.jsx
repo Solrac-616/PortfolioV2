@@ -31,6 +31,11 @@ import tailwind from "./images/webp/tailwind.webp";
 import typescript from "./images/webp/typescript.webp";
 import wordpress from "./images/webp/wordpress.webp";
 
+// SCENE
+import p1 from "./scene/p1.png";
+import p2 from "./scene/p2.png";
+import p3 from "./scene/p3.png";
+
 export default{
     react,
     logoA,
@@ -59,5 +64,9 @@ export default{
     sequelize,
     tailwind,
     typescript,
-    wordpress
+    wordpress,
+    // SCENE
+    p1,
+    p2,
+    p3
 };
