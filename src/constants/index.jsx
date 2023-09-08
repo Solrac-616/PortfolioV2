@@ -145,5 +145,55 @@ const skills =
   },
 ]
 
+const proyects =
+[
+  {
+    id: 1,
+    name: "React Portfolio V1",
+    img: Images.react2,
+    description: "Proyecto numero 1"
+  },
+  {
+    id: 2,
+    name: "Garibaldy Web",
+    img: Images.node,
+    description: "Proyecto numero 2"
+  },
+  {
+    id: 3,
+    name: "API RESTful V1",
+    img: Images.html,
+    description: "Proyecto numero 3"
+  },
+  {
+    id: 4,
+    name: "CRUD Angular",
+    img: Images.html,
+    description: "Proyecto numero 4"
+  },
+]
 
-export { skills };
+const proyectsFilters =
+[
+  {
+    id: 1,
+    name: "All",
+  },
+  {
+    id: 2,
+    name: "React",
+  },
+  {
+    id: 3,
+    name: "Angular",
+  },
+  {
+    id: 4,
+    name: "Node",
+  },
+]
+
+
+
+
+export { skills, proyects, proyectsFilters};
