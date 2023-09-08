@@ -307,14 +307,19 @@ form .error
   cursor: pointer;
 }
 
+.btn-form:hover
+{
+  box-shadow: 0 0 8px 0 #ffffff ;
+}
+
 .btn-form.form-valid
 {
   color: #38bff8;
-  box-shadow: 0 0 8px 0 #38bff8;
+  box-shadow: 0 0 8px 0 #38bff8 !important;
 }
 .btn-form.form-invalid
 {
   color: #f31b1b;
-  box-shadow: 0 0 8px 0 #f31b1b;
+  box-shadow: 0 0 8px 0 #f31b1b !important;
   cursor: not-allowed !important;
 }

@@ -122,7 +122,7 @@ const Contactform = () => {
             <div className="btn-submit">
               <button 
                 type='submit' 
-                className={`btn-form ${formik.isValid ? 'form-valid' : 'form-invalid'}`}
+                className={`btn-form ${formik.isValid ? '' : 'form-invalid'} ${formik.isValid && formik.touched.message && formik.touched.email && formik.touched.name ? 'form-valid' : ''}`}
               > 
                 Ingresar
               </button>
