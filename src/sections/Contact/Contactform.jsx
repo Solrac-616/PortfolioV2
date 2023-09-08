@@ -60,7 +60,7 @@ const Contactform = () => {
             </motion.div>
           </div>
           <div className="layer">
-            <motion.div variants={appear('tween', 1, 0.5)} className="img-scene">    
+            <motion.div variants={appear('tween', 1, 0.5)} className="img-scene scene-dots">    
               <img src={Images.p3} alt="" />
             </motion.div>
           </div>
