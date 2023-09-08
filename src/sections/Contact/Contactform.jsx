@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { AnimateH2 } from "../../components/AnimateTitle"
 import { appear, staggerContainer } from "../../utils/motion"
@@ -9,13 +9,16 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import CustomInput from "../../components/CustomInput"
 
+import emailjs from '@emailjs/browser';
+
 const formSchema = yup.object({
-  name: yup.string().required("Name is rquired."),
+  name: yup.string().required("Name is required."),
   email: yup.string().email("Email is invalid.").required("Email is required."),
   message: yup.string().required("Message is rquired.")
 });
 
 const Contactform = () => {
+  const form = useRef();
 
   useEffect(() => {
     let scene = document.getElementById('scene');
@@ -32,8 +35,18 @@ const Contactform = () => {
     onSubmit: async (values) => {
       alert(JSON.stringify(values));
       console.log('====================================');
-      console.log(formik);
+      console.log(form.current);
       console.log('====================================');
+
+      emailjs.sendForm('service_opq9kqg', 'template_trd6zim', form.current, '-X8Zm7t_jq68dJkkz')
+      .then((result) => {
+          console.log("EXITO");
+          console.log(result.text);
+      }, (error) => {
+          console.log("ERROR :(");
+          console.log(error.text);
+      });
+
     },
   });
 
@@ -69,7 +82,7 @@ const Contactform = () => {
 
       <div className="form-container">
         
-        <form onSubmit={formik.handleSubmit}>
+        <form ref={form} onSubmit={formik.handleSubmit}>
           <NavObserver name="form" config={0.5} stringClass="contact-form">
             <AnimateH2 title="Contact me" textStyles=''/>
             <div className={`input-box ${formik.touched.name && formik.errors.name ? 'box-error' : ''} ${formik.touched.name && !formik.errors.name ? 'box-valid' : '' }`}>
@@ -108,6 +121,7 @@ const Contactform = () => {
             </div>
             <div className={`text-box  ${formik.touched.message && formik.errors.message ? 'box-error' : ''} ${formik.touched.message && !formik.errors.message ? 'box-valid' : '' }`}>
               <textarea
+                name="message"
                 className={`${formik.touched.message && formik.errors.message ? 'input-error' : ''}`}
                 value={formik.values.message}
                 onChange={formik.handleChange("message")}

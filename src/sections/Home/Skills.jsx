@@ -42,7 +42,8 @@ const Skills = () => {
           <source src={video} type="video/mp4" />
         </video>
 
-        <div className="back-blur"></div>
+        {/* <div className="back-blur"></div> */}
+        <NavObserver name="skill" stringClass="back-blur" config={0.2}></NavObserver>
 
         <AnimateH2 title="SKILLS" textStyles='title' id="skillsTitle" />
         

@@ -280,6 +280,7 @@
   position: absolute;
   user-select: auto;
   max-height: 110px;
+  pointer-events: none;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -310,6 +311,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: move;
 }
 
 .dark .sphere-black

@@ -21,6 +21,7 @@ const About = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.5 }}
         className="row-default-v2 font-raleway about-head"
+        data-cursor-stick="#resumeTitle"
       >
 
         <video autoPlay muted loop={true} controls={false}>
@@ -29,7 +30,7 @@ const About = () => {
 
         <div className="back-blur"></div>
 
-        <AnimateH2 title="ABOUT" textStyles='observe' id="resume" />
+        <AnimateH2 title="ABOUT" textStyles='observe' id="resumeTitle" />
       </motion.div>
       <motion.div 
         variants={staggerContainer}
@@ -39,7 +40,7 @@ const About = () => {
         className="row-default-v1 about-content"
       >
         <div className="about-picture">
-          <div className="sphere-black">
+          <div className="sphere-black" data-cursor-text={'Rotate Sphere'} data-cursor-size="100px" data-cursor-color={'#000000f0'} >
             <Canvas camera={{fov: 25, position: [5, 5, 5]}}>
               <OrbitControls enableZoom={false} autoRotate />
               <ambientLight intensity={1} />
@@ -55,7 +56,7 @@ const About = () => {
             </Canvas>
           </div>
           
-          <div className="sphere-white">
+          <div className="sphere-white" data-cursor-text={'Rotate Sphere'} data-cursor-size="100px" data-cursor-color={'#38bff8f0'}>
             <Canvas camera={{fov: 25, position: [5, 5, 5]}}>
               <OrbitControls enableZoom={false} autoRotate />
               <ambientLight intensity={1} />
