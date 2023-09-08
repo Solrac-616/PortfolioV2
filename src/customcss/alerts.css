@@ -1,0 +1,39 @@
+.swal2-popup
+{
+  background-color: #212121eb;
+  border-radius: 30px;
+  box-shadow: 0 0 22px 0 #38bff8cc;
+}
+
+.swal2-container.swal2-center
+{
+  background-color: #000000cc;
+  backdrop-filter: blur(1px);
+}
+
+.swal2-success-circular-line-right,
+.swal2-success-circular-line-left,
+.swal2-success-fix
+{
+  background: transparent !important;
+}
+
+.swal2-popup h2
+{
+  font-family: 'Raleway', sans-serif;
+  color: #38bff8;
+}
+.swal2-popup .swal2-html-container
+{
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+.swal2-popup .swal2-confirm
+{
+  background-color: #000000;
+  color: #38bff8;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+}

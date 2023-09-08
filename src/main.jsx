@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import './loader.css'
 import './customcss/navlinks.css'
+import './customcss/alerts.css'
 
 import store from './store/store'
 import { Provider } from 'react-redux'

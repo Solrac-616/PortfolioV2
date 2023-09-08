@@ -15,12 +15,17 @@ import { animateScroll as scroll, scroller } from 'react-scroll';
 
 import 'react-creative-cursor/dist/styles.css';
 import Themebuttondual from '../components/Themebuttondual';
+import Sending from '../components/Sending';
+
+import { useSelector  } from 'react-redux';
 
 const Root = () => {
   const location = useLocation();
   // console.log('==============LOCATION==============');
   // console.log(location);
   // console.log('====================================');
+
+  const { loadState } = useSelector(state => state.load);
 
   useEffect(() => {
     if (location.state && location.state.scrollTo) {
@@ -44,7 +49,7 @@ const Root = () => {
 
   return (
     <div className='root-layout'>
-    
+      
       <main className='main-content'>
         
         <Navbar />
@@ -54,7 +59,14 @@ const Root = () => {
         <WhatsApp />
         
       </main>
-
+      {loadState ?
+        <>
+          <Sending />
+        </>
+        :
+        <>
+        </>
+      }
       <Cursor isGelly={true} cursorBackgrounColor="#00000057" />
     </div>
   )

@@ -11,6 +11,11 @@ import CustomInput from "../../components/CustomInput"
 
 import emailjs from '@emailjs/browser';
 
+import { useDispatch  } from 'react-redux';
+import { setLoaderFalse, setLoaderTrue } from "../../store/slices/loaderSlice/loaderSlice";
+
+import Swal from 'sweetalert2';
+
 const formSchema = yup.object({
   name: yup.string().required("Name is required."),
   email: yup.string().email("Email is invalid.").required("Email is required."),
@@ -19,6 +24,7 @@ const formSchema = yup.object({
 
 const Contactform = () => {
   const form = useRef();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     let scene = document.getElementById('scene');
@@ -33,18 +39,26 @@ const Contactform = () => {
     },
     validationSchema: formSchema,
     onSubmit: async (values) => {
-      alert(JSON.stringify(values));
-      console.log('====================================');
-      console.log(form.current);
-      console.log('====================================');
+      // alert(JSON.stringify(values));
+      // console.log('====================================');
+      // console.log(form.current);
+      // console.log('====================================');
+      dispatch(setLoaderTrue());
 
       emailjs.sendForm('service_opq9kqg', 'template_trd6zim', form.current, '-X8Zm7t_jq68dJkkz')
       .then((result) => {
-          console.log("EXITO");
-          console.log(result.text);
+        dispatch(setLoaderFalse());
+        Swal.fire({
+          title: "It's done!!",
+          text: "Thank you for sending an email, I will respond as soon as possible. I invite you to write to me on WhatsApp also if you have not done so yet.",
+          icon: 'success',
+          confirmButtonText: 'Continue',
+        }).then((result) => {
+          formik.resetForm();
+        })
       }, (error) => {
-          console.log("ERROR :(");
-          console.log(error.text);
+        console.log("ERROR :(");
+        console.log(error.text);
       });
 
     },

@@ -11,8 +11,11 @@ export const loadSlice = createSlice({
     name: 'load',
     initialState: initialState,
     reducers: {
-        setLoader: (state, action) => {
-          state.loadState = action.payload;
+        setLoaderTrue: (state) => {
+          state.loadState = true;
+        },
+        setLoaderFalse: (state) => {
+          state.loadState = false;
         },
         setMessageLoader: (state, action) => {
           state.message = action.payload;
@@ -26,4 +29,4 @@ export const loadSlice = createSlice({
 
 export default loadSlice.reducer;
 
-export const { setLoader, setMessageLoader } = loadSlice.actions
+export const { setLoaderTrue, setLoaderFalse, setMessageLoader } = loadSlice.actions
