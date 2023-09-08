@@ -147,7 +147,7 @@
 .form-section .form-container
 {
   padding: 20px;
-  background-color: #ffffff1f;;
+  background-color: #ffffff14;;
   border-radius: 20px;
   backdrop-filter: blur(2px);
   width: 500px;
@@ -170,7 +170,10 @@
 .input-box
 {
   position: relative;
-  border-bottom: 2px solid #ffffff;
+}
+.text-box
+{
+  position: relative;
 }
 
 .input-box i
@@ -196,9 +199,31 @@
   color: #fff;
 }
 
+.input-box .line
+{
+  position: absolute;
+  width: 100%;
+  bottom: -2px;
+  left: 0;
+  border-bottom: 2px solid #ffffff;
+}
+
+.input-box input:checked
+{
+  background-color: transparent;
+}
+
+.input-box input,
+.input-box i,
+.input-box .line
+{
+  transition: all .4s;
+}
+
 textarea
 {
   width: 100%;
+  resize: none !important;
   background: transparent;
   border: none;
   outline: none;
@@ -221,17 +246,42 @@ textarea
   transition: all .5s;
 }
 
-.input-box input:focus ~ label
+.input-box input:focus ~ label,
+.input-box input.focus ~ label
 {
   top: -5px;
 }
-.input-box input:has-value ~ label
+
+.input-box.box-error .line
 {
-  top: -5px;
+  border: 1px solid #f31b1b;
+  box-shadow: 0px 0px 8px 0px #f31b1be3;
 }
-input:not([value="value"]) ~ label 
+.input-box.box-error i
 {
-  top: -5px;
+  color: #f31b1b !important;
+}
+
+.text-box.box-error textarea
+{
+  border: 1px solid #f31b1b;
+  box-shadow: 0 0 8px 0 #f31b1b;
+}
+
+.input-box.box-valid .line
+{
+  border: 1px solid #38bff8;
+  box-shadow: 0px 0px 8px 0px #38bff8;
+}
+.input-box.box-valid i
+{
+  color: #38bff8;
+}
+
+.text-box.box-valid textarea
+{
+  border: 1px solid #38bff8;
+  box-shadow: 0 0 8px 0 #38bff8;
 }
 
 form .error
@@ -239,7 +289,32 @@ form .error
   position: absolute;
   top: 100%;
   left: 0;
-  padding: 5px 0 0 0;
+  padding: 5px 0 0 5px;
   color: #f31b1b;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+.btn-form
+{
+  letter-spacing: 3px;
+  padding: 8px 17px;
+  border-radius: 12px;
+  border: navajowhite;
+  font-weight: 700;
+  background-color: #0f0f0f;
+  color: #ffffff;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.btn-form.form-valid
+{
+  color: #38bff8;
+  box-shadow: 0 0 8px 0 #38bff8;
+}
+.btn-form.form-invalid
+{
+  color: #f31b1b;
+  box-shadow: 0 0 8px 0 #f31b1b;
+  cursor: not-allowed !important;
 }

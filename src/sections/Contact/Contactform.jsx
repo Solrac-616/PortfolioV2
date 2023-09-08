@@ -11,7 +11,7 @@ import CustomInput from "../../components/CustomInput"
 
 const formSchema = yup.object({
   name: yup.string().required("Name is rquired."),
-  email: yup.string().email("Email is required.").required("Debe ingresar su correo"),
+  email: yup.string().email("Email is invalid.").required("Email is required."),
   message: yup.string().required("Message is rquired.")
 });
 
@@ -24,12 +24,16 @@ const Contactform = () => {
 
   const formik = useFormik({
     initialValues: {
-      name: '',
-      email: ''
+      name: "",
+      email: "",
+      message:""
     },
     validationSchema: formSchema,
     onSubmit: async (values) => {
-      console.log(JSON.stringify(values));
+      alert(JSON.stringify(values));
+      console.log('====================================');
+      console.log(formik);
+      console.log('====================================');
     },
   });
 
@@ -68,46 +72,57 @@ const Contactform = () => {
         <form onSubmit={formik.handleSubmit}>
           <NavObserver name="form" config={0.5} stringClass="contact-form">
             <AnimateH2 title="Contact me" textStyles=''/>
-            <div className="input-box">
+            <div className={`input-box ${formik.touched.name && formik.errors.name ? 'box-error' : ''} ${formik.touched.name && !formik.errors.name ? 'box-valid' : '' }`}>
               <i className="fa-solid fa-user"></i>
               <CustomInput
                 type="text"
                 name="name"
-                classNames=""
+                classNames={`font-montserrat ${formik.values.name === "" ? '' : 'focus'}`}
                 isError={formik.touched.name && formik.errors.name}
                 value={formik.values.name}
                 onChange={formik.handleChange("name")}
                 onBlur={formik.handleBlur("name")}
               />
               <label htmlFor="">Name</label>
-              <div className="error">
+              <div className="line"></div>
+              <p className="error">
                 {formik.touched.name && formik.errors.name}
-              </div>
+              </p>
             </div>
-            <div className="input-box">
+            <div className={`input-box  ${formik.touched.email && formik.errors.email ? 'box-error' : ''} ${formik.touched.email && !formik.errors.email ? 'box-valid' : '' }`}>
               <i className="fa-solid fa-at"></i>
               <CustomInput
                 type="email"
                 name="email"
-                classNames=""
+                classNames={`font-montserrat ${formik.values.email === "" ? '' : 'focus'}`}
                 isError={formik.touched.email && formik.errors.email}
                 value={formik.values.email}
                 onChange={formik.handleChange("email")}
                 onBlur={formik.handleBlur("email")}
               />
               <label htmlFor="">Email</label>
-              <div className="error">
+              <div className="line"></div>
+              <p className="error">
                 {formik.touched.email && formik.errors.email}
-              </div>
+              </p>
             </div>
-            <textarea 
-              placeholder="write a message..." 
-              rows={10}
-            />
+            <div className={`text-box  ${formik.touched.message && formik.errors.message ? 'box-error' : ''} ${formik.touched.message && !formik.errors.message ? 'box-valid' : '' }`}>
+              <textarea
+                className={`${formik.touched.message && formik.errors.message ? 'input-error' : ''}`}
+                value={formik.values.message}
+                onChange={formik.handleChange("message")}
+                onBlur={formik.handleBlur("message")}
+                placeholder="write a message..." 
+                rows={10}
+              />
+              <p className="error">
+                {formik.touched.message && formik.errors.message}
+              </p>
+            </div>
             <div className="btn-submit">
               <button 
                 type='submit' 
-                className={`${formik.isValid ? 'form-valid' : 'form-invalid'}`}
+                className={`btn-form ${formik.isValid ? 'form-valid' : 'form-invalid'}`}
               > 
                 Ingresar
               </button>

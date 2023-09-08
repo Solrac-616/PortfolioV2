@@ -13,6 +13,7 @@ const CustomInput = (props) => {
       value={value}
       onChange={onChange}
       onBlur={onBlur}
+      autocomplete="off"
       />
     </>
   )

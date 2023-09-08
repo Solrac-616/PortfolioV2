@@ -28,6 +28,14 @@ body
   font-family: 'Montserrat', sans-serif;
 }
 
+p,
+label,
+button,
+a
+{
+  font-family: 'Montserrat', sans-serif;
+} 
+
 .font-raleway
 {
   font-family: 'Raleway', sans-serif;
