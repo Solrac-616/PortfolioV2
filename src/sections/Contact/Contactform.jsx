@@ -57,8 +57,15 @@ const Contactform = () => {
           formik.resetForm();
         })
       }, (error) => {
-        console.log("ERROR :(");
-        console.log(error.text);
+        dispatch(setLoaderFalse());
+        Swal.fire({
+          title: "Something's wrong",
+          text: "I'm sorry, something went wrong when sending the email, the service is probably disconnected, try to contact me by WhatsApp and I will resolve it as soon as possible.",
+          icon: 'error',
+          confirmButtonText: 'Continue',
+        }).then((result) => {
+          
+        })
       });
 
     },
