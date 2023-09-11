@@ -35,8 +35,7 @@ const Projects = () => {
       <Filters 
         active={active} 
         setActive={setActive}
-        list={list}
-        setFiltered={setFiltered}
+        classString={'row-filters'}
       />
 
       <motion.div 

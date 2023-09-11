@@ -443,6 +443,36 @@
   font-size: 45px;
 }
 
+.row-filters
+{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 35px 0;
+}
+
+.row-filters button
+{
+  width: 85px;
+  color: #ffffff;
+  background-color: #212121;
+  border-radius: 15px;
+  border: 2px solid #000000;
+  outline: none;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 5px 0;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.row-filters button:hover,
+.row-filters button.active
+{
+  color: #38bff8;
+  border: 2px solid #38bff8;
+}
+
 .projects-list
 {
   display: grid;
