@@ -30,7 +30,7 @@ const About = () => {
 
         <div className="back-blur"></div>
 
-        <AnimateH2 title="ABOUT" textStyles='observe' id="resumeTitle" />
+        <AnimateH2 title="ABOUT" textStyles='' id="resumeTitle" />
       </motion.div>
       <motion.div 
         variants={staggerContainer}

@@ -36,6 +36,12 @@ import p1 from "./scene/p1.png";
 import p2 from "./scene/p2.png";
 import p3 from "./scene/p3.png";
 
+// PROJECTS
+import project1 from "./Images/webp/project1.webp"
+import project2 from "./Images/webp/project2.webp"
+import project3 from "./Images/webp/project3.webp"
+import project4 from "./Images/webp/project4.webp"
+
 export default{
     react,
     logoA,
@@ -68,5 +74,10 @@ export default{
     // SCENE
     p1,
     p2,
-    p3
+    p3,
+    // PROJECTS
+    project1,
+    project2,
+    project3,
+    project4,
 };

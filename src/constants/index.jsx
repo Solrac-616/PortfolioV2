@@ -145,31 +145,35 @@ const skills =
   },
 ]
 
-const proyects =
+const projects =
 [
   {
     id: 1,
     name: "React Portfolio V1",
-    img: Images.react2,
-    description: "Proyecto numero 1"
+    img: Images.project1,
+    description: "Proyecto numero 1",
+    categorys: ["react"]
   },
   {
     id: 2,
-    name: "Garibaldy Web",
-    img: Images.node,
-    description: "Proyecto numero 2"
+    name: "CRUD Angular",
+    img: Images.project2,
+    description: "Proyecto numero 2",
+    categorys: ["angular", "node"]
   },
   {
     id: 3,
-    name: "API RESTful V1",
-    img: Images.html,
-    description: "Proyecto numero 3"
+    name: "Garibaldy Web",
+    img: Images.project3,
+    description: "Proyecto numero 3",
+    categorys: ["react"]
   },
   {
     id: 4,
-    name: "CRUD Angular",
-    img: Images.html,
-    description: "Proyecto numero 4"
+    name: "API RESTful V1",
+    img: Images.project4,
+    description: "Proyecto numero 4",
+    categorys: ["node"]
   },
 ]
 
@@ -177,23 +181,20 @@ const proyectsFilters =
 [
   {
     id: 1,
-    name: "All",
+    name: "all",
   },
   {
     id: 2,
-    name: "React",
+    name: "react",
   },
   {
     id: 3,
-    name: "Angular",
+    name: "angular",
   },
   {
     id: 4,
-    name: "Node",
+    name: "node",
   },
 ]
 
-
-
-
-export { skills, proyects, proyectsFilters};
+export { skills, projects, proyectsFilters};
