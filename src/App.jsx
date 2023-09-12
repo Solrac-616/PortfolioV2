@@ -10,9 +10,12 @@ import Contactlayout from "./layouts/Contactlayout";
 // IMPORT PAGES
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+// import { useEffect, useState } from "react";
+// import OnLoad from "./components/OnLoad";
 
 
 function App() {
+  // const [isLoading, setIsLoading] = useState(true);
 
   const router = createBrowserRouter(
 
@@ -31,6 +34,18 @@ function App() {
     )
 
   )
+
+  // useEffect(() => {
+  //   const handleLoad = () => {
+  //     setIsLoading(false); // Cambia el estado a false cuando el contenido ha terminado de cargarse
+  //   };
+
+  //   window.on('load', handleLoad); // Agrega el evento 'load' al objeto 'window'
+
+  //   // $(window).on("load",function(){
+  //   //   $(".loader-wrapper").fadeOut("slow");
+  //   // });
+  // }, []);
 
   return (
     <>
