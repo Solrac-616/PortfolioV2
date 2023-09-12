@@ -1,3 +1,10 @@
+:root {
+  --primary: #38bff8;
+  --sec: #212121;
+  --bg1: #f1f1f1;
+  --bg2: #101010;
+}
+
 .skills-head video,
 .about-head  video
 {
@@ -482,15 +489,12 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.projects-list img
-{
-}
-
 .card-project
 {
   width: 100%;
   max-width: 350px;
   height: 400px;
+  margin: auto;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -499,6 +503,7 @@
 
 .card-project .card-img
 {
+  overflow: hidden;
   position: relative;
   height: 240px;
   width: 100%;
@@ -508,8 +513,48 @@
   border-radius: 15px;
 }
 
-.card-project .card-img::before
+.card-project .card-img a
 {
+  display: block;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card-project .card-img a:hover
+{
+  color: var(--primary);
+}
+
+.card-project .card-img a .alt
+{
+  background-color: #212121bb;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: all .5s;
+}
+
+.card-project:hover .card-img a .alt
+{
+  transform: translateY(0%);
+}
+
+.card-project:hover .card-img a .alt i
+{
+  margin-left: 6px;
+}
+
+.card-project .card-img::after
+{
+  pointer-events: none;
   content: '';
   position: absolute;
   bottom: 0;
@@ -518,10 +563,15 @@
   height: 20px;
   background-color: #21212100;
   border-radius: 50%;
-  box-shadow: -10px 10px 0 #f1f1f1;
+  box-shadow: -10px 10px 0 var(--bg1);
 }
-.card-project .card-img::after
+.dark .card-project .card-img::before
 {
+  box-shadow: -10px 10px 0 var(--bg2);
+}
+.card-project .card-img::before
+{
+  pointer-events: none;
   content: '';
   position: absolute;
   bottom: 70px;
@@ -530,7 +580,12 @@
   height: 20px;
   background-color: #21212100;
   border-radius: 50%;
-  box-shadow: -10px 10px 0 #f1f1f1;
+  box-shadow: -10px 10px 0 var(--bg1);
+  z-index: 1;
+}
+.dark .card-project .card-img::after
+{
+  box-shadow: -10px 10px 0 var(--bg2);
 }
 
 .card-project .card-content
@@ -538,26 +593,47 @@
   position: relative;
   width: 100%;
   height: 150px;
-  background-color: #ffffff;
+  background-color: #212121;
   border-radius: 15px;
   border-top-left-radius: 0px;
+  transition: color .5s, background-color .5s;
+}
+
+.dark .card-project .card-content
+{
+  background-color: #ffffff;
 }
 
 .card-project .name
 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   height: 80px;
   top: -80px;
   left: 0;
   width: 50%;
-  background-color: #ffffff;
-  border-top: 10px solid #f1f1f1;
-  border-right:  10px solid #f1f1f1;
+  background-color: #212121;
+  border-top: 10px solid var(--bg1);
+  border-right:  10px solid var(--bg1);
   border-top-right-radius: 25px;
+  color: #ffffff;
+  transition: color .5s, background-color .5s;
+}
+
+.dark .card-project .name
+{
+  background-color: #ffffff;
+  color: #212121;
+  font-size: 15px;
+  border-top: 10px solid var(--bg2);
+  border-right:  10px solid var(--bg2);
 }
 
 .card-project .name::before
 {
+  pointer-events: none;
   content: '';
   position: absolute;
   top: 0;
@@ -566,11 +642,17 @@
   height: 25px;
   border-radius: 50%;
   background-color: #21212100;
-  box-shadow: -10px -10px 0 #f1f1f1;
+  box-shadow: -10px -10px 0 var(--bg1);
+}
+
+.dark .card-project .name::before
+{
+  box-shadow: -10px -10px 0 var(--bg2);
 }
 
 .card-project .name::after
 {
+  pointer-events: none;
   content: '';
   position: absolute;
   bottom: 0;
@@ -579,7 +661,64 @@
   height: 25px;
   border-radius: 50%;
   background-color: #21212100;
+  box-shadow: -10px 10px 0 #212121;
+  transition: box-shadow .5s;
+}
+
+.dark .card-project .name::after
+{
   box-shadow: -10px 10px 0 #ffffff;
+}
+
+.card-project .card-info
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 5px;
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+  transition: color .5s;
+}
+.dark .card-project .card-info
+{
+  color: #000000;
+}
+
+.card-project .card-info .categorys
+{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+}
+
+.card-project .card-info .categorys span
+{
+  padding: 3px 5px;
+  background-color: transparent;
+  border-radius: 15px;
+}
+
+.dark .card-project .card-info .categorys span
+{
+  background-color: #212121;
+}
+
+.card-project .card-info .color-react
+{
+  color: #61DBFB;
+}
+.card-project .card-info .color-angular
+{
+  color: #B52E31;
+}
+.card-project .card-info .color-node
+{
+  color: #3c873a;
 }
 
 /*----------------------------FOOTER*/

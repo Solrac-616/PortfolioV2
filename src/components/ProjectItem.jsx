@@ -14,14 +14,24 @@ const ProjectItem = ({ project }) => {
       className="card-project"
     >
       <div className="card-img" style={{ backgroundImage: `url(${project.img})` }}>
-        {/* <img src={project.img} alt={project.name} /> */}
+        <a href="https://github.com/Solrac-616?tab=repositories">
+          <div className="alt">
+            <p>View Project</p> <i className="fa-solid fa-angles-right"></i>
+          </div>
+        </a>
       </div>
       <div className="card-content">
-        <span className="name">{project.name}</span>
-        <h2>{project.name}</h2>
-        {categorys.map( item => (
-          <span key={item}>{item}</span>
-        ))}
+        <span className="name font-raleway">
+          <h3>{project.name}</h3>
+        </span>
+        <div className="card-info font-montserrat">
+          <p>{project.description}</p>
+          <div className="categorys">
+            {categorys.map( item => (
+              <span key={item} className={`${item === "react" && "color-react"} ${item === "angular" && "color-angular"} ${item === "node" && "color-node"}`}>#{item}</span>
+            ))}
+          </div>
+        </div>
       </div>
     </motion.div>
   )
