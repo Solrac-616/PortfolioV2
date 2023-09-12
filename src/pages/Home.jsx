@@ -3,8 +3,8 @@ import "../Home.css"
 import Banner from "../sections/Home/Banner"
 import About from "../sections/Home/About"
 import Skills from "../sections/Home/Skills"
-import Test3D from "../components/Test3D"
 import Projects from "../sections/Home/Projects"
+import Footer from "../sections/Footer"
 
 const Home = () => {
   return (
@@ -13,6 +13,7 @@ const Home = () => {
       <About />
       <Skills />
       <Projects />
+      <Footer />
     </>
   )
 }

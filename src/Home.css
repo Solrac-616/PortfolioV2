@@ -487,3 +487,40 @@
   width: 100%;
 
 }
+
+/*----------------------------FOOTER*/
+.section-footer
+{
+  box-shadow: 0 0 16px 0 #000000b3;
+}
+.dark .section-footer
+{
+  box-shadow: 0 0 16px 0 #38bff86b;
+}
+
+.row-footer
+{
+  min-height: 300px;
+}
+
+.row-copy
+{
+  background-color: #212121;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 5%;
+}
+
+.row-copy a
+{
+  text-decoration: none;
+  color: #ffffff;
+  transition: all .7s;
+}
+
+.row-copy a:hover
+{
+  text-decoration: none;
+  color: #25D366;
+}
