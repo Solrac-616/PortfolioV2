@@ -62,7 +62,8 @@ a
 {
   width: 90%;
   max-width: 1500px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .row-default-v2
 {
@@ -462,7 +463,10 @@ header
 
 @media screen and (max-width: 767px)
 {
-
+  .row-default-v1 
+  {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 639px)

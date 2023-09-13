@@ -19,7 +19,7 @@ const Banner = () => {
       id="bannerHome" 
       className="banner-home"
     >
-      <div className="row-default-v1">
+      <div className="row-default-v1 row-banner">
         <div className='banner-content'>
           <motion.p variants={fadeIn('right', 'tween', 0.3 , 0.5)} className='greeting font-montserrat'>Hi!! this is my</motion.p>
           {/* <motion.h2 variants={appear('tween', 0.5, 0.5)} className='font-raleway'>PORTFOLIO</motion.h2> */}
@@ -89,20 +89,28 @@ const Banner = () => {
         }}
         >
           <div className="profession stack-icon">
-            <i className="fa-solid fa-laptop-code"></i>
-            <h3>Full-Stack Developer</h3>
+            <div className="profession-content">
+              <i className="fa-solid fa-laptop-code"></i>
+              <h3>Full-Stack Developer</h3>
+            </div>
           </div>
           <div className="profession java-icon">
-            <i className="fa-brands fa-js"></i>
-            <h3>Next</h3>
+            <div className="profession-content">
+              <i className="fa-brands fa-js"></i>
+              <h3>Next</h3>
+            </div>
           </div>
           <div className="profession angular-icon">
-            <i className="fa-brands fa-angular"></i>
-            <h3>Angular</h3>
+            <div className="profession-content">
+              <i className="fa-brands fa-angular"></i>
+              <h3>Angular</h3>
+            </div>
           </div>
           <div className="profession react-icon">
-            <i className="fa-brands fa-react"></i>
-            <h3>React</h3>
+            <div className="profession-content">
+              <i className="fa-brands fa-react"></i>
+              <h3>React</h3>
+            </div>
           </div>
           <div className="circle">
 
