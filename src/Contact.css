@@ -329,3 +329,48 @@ form .error
   box-shadow: 0 0 8px 0 #f31b1b !important;
   cursor: not-allowed !important;
 }
+
+
+
+/*MEDIAQUERIES*/
+
+/*mediaqueri standar
+
+@media screen and (min-width: 500px) and (max-width: 800px)
+{
+
+}
+*/
+
+
+/* MEDIAQUERIES BASADOS EN TAILWIND */
+
+@media screen and (min-width: 1536px) 
+{
+
+}
+
+@media screen and (max-width: 1535px)
+{
+
+}
+
+@media screen and (max-width: 1279px)
+{
+
+}
+
+@media screen and (max-width: 1023px)
+{
+
+}
+
+@media screen and (max-width: 767px)
+{
+
+}
+
+@media screen and (max-width: 639px)
+{
+
+}

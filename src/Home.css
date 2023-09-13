@@ -757,3 +757,48 @@
   text-decoration: none;
   color: #25D366;
 }
+
+
+
+/*MEDIAQUERIES*/
+
+/*mediaqueri standar
+
+@media screen and (min-width: 500px) and (max-width: 800px)
+{
+
+}
+*/
+
+
+/* MEDIAQUERIES BASADOS EN TAILWIND */
+
+@media screen and (min-width: 1536px) 
+{
+
+}
+
+@media screen and (max-width: 1535px)
+{
+
+}
+
+@media screen and (max-width: 1279px)
+{
+
+}
+
+@media screen and (max-width: 1023px)
+{
+
+}
+
+@media screen and (max-width: 767px)
+{
+
+}
+
+@media screen and (max-width: 639px)
+{
+
+}
