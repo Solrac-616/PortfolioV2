@@ -98,7 +98,7 @@ header
   position: relative;
   min-height: 80px;
   height: 80px;
-  z-index: 1;
+  z-index: 9;
 }
 
 .logo-navbar img
@@ -114,11 +114,13 @@ header
 
 .navbar-default
 {
+  position: relative;
   background-color: #212121;
   backdrop-filter: blur(2px);
   padding: 5px 0px;
   box-shadow: 0px 0px 5px 0px #000000a9;
   transition: all .7s;
+  z-index: 2;
 }
 .dark .navbar-default
 {
@@ -148,13 +150,15 @@ header
 
 .row-navbar
 {
+  position: relative;
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 2;
 }
 
-.row-navbar ul
+.row-navbar .nav-links
 {
   height: 100%;
   padding-left: 20px;
@@ -163,20 +167,72 @@ header
   gap: 7px;
 }
 
-.row-navbar li
+.row-navbar .nav-links li
 {
   list-style: none;
 }
 
-.row-navbar li a
+.row-navbar .nav-links li a
 {
   text-decoration: none;
   color: #ffffff;
   font-size: 18px;
 }
-.dark .row-navbar li a
+.dark .row-navbar .nav-links li a
 {
-  color: #fff;
+  color: hsl(0, 0%, 100%);
+}
+
+.mobile-navbar
+{
+  position: fixed;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  background-color: #212121cc;
+  height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(2px);
+  transition: opacity .5s;
+  z-index: 1;
+}
+
+.mobile-navbar.active
+{
+  opacity: 1;
+  pointer-events: all;
+  display: block;
+}
+
+.mobile-navbar-back 
+{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.mobile-links 
+{
+  position: relative;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  z-index: 3;
+}
+
+.mobile-links li
+{
+  list-style: none;
+}
+.mobile-links a
+{
+  text-decoration: none;
 }
 
 @keyframes fixednav {
@@ -422,6 +478,44 @@ header
 }
 
 
+/*----------------------------FOOTER*/
+.section-footer
+{
+  box-shadow: 0 0 16px 0 #000000b3;
+}
+.dark .section-footer
+{
+  box-shadow: 0 0 16px 0 #38bff86b;
+}
+
+.row-footer
+{
+  min-height: 300px;
+}
+
+.row-copy
+{
+  background-color: #212121;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 5%;
+}
+
+.row-copy a
+{
+  text-decoration: none;
+  color: #ffffff;
+  transition: all .7s;
+}
+
+.row-copy a:hover
+{
+  text-decoration: none;
+  color: #25D366;
+}
+
+
 
 
 
@@ -458,7 +552,10 @@ header
 
 @media screen and (max-width: 1023px)
 {
-
+  .row-navbar .nav-links li a 
+  {
+    font-size: 13px;
+  }
 }
 
 @media screen and (max-width: 767px)
@@ -467,9 +564,48 @@ header
   {
     width: 95%;
   }
+
+  header 
+  {
+    min-height: 65px;
+    height: 65px;
+  }
+
+  .row-navbar 
+  {
+    height: 55px;
+  }
+
+  .logo-navbar img 
+  {
+    max-height: 40px !important;
+  }
+
+  .nav-links 
+  {
+    display: none !important;
+    visibility: hidden;
+  }
+
+  .mobile-navbar
+  {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 639px)
 {
 
+}
+
+@media screen and (max-width: 500px)
+{
+  .row-copy 
+  {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 6px;
+  }
 }
