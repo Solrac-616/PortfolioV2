@@ -83,12 +83,12 @@ const Contactform = () => {
       
       <div className="scene-wrapper">
         <div id="scene">
-          <div className="layer" data-depth-x="-0.3" data-depth-y="-0.1">
+          <div className="layer layer1" data-depth-x="-0.3" data-depth-y="-0.1">
             <motion.div variants={appear('tween', 0.6, 0.5)} className="img-scene">    
               <img src={Images.p1} alt="" />
             </motion.div>
           </div>
-          <div className="layer" data-depth-x="-0.5" data-depth-y="-0.2">
+          <div className="layer layer2" data-depth-x="-0.5" data-depth-y="-0.2">
             <motion.div variants={appear('tween', 0.3, 0.5)} className="img-scene">    
               <img src={Images.p2} alt="" />
             </motion.div>
