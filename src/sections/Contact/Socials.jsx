@@ -16,7 +16,8 @@ const Socials = () => {
   }
 
   return (
-    <section id="socials" className="section-test section-socials" onMouseLeave={resetShow}>
+    <section id="socials" className="section-socials" onMouseLeave={resetShow} >
+      <BackImage img={Images.socialBack} show={true} />
       <BackImage img={Images.whatsapp} show={backShow === "whatsapp"} />
       <BackImage img={Images.linkedin} show={backShow === "linkedin"} />
       <BackImage img={Images.github1} show={backShow === "github"} />

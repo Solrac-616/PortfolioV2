@@ -7,6 +7,7 @@ import pictureB from "./images/png/picture_b.png";
 import axios from "./images/png/axios.png";
 
 // WEBP
+import socialBack from "./images/webp/backsocials.webp";
 import whatsapp from "./images/webp/whatsapp.webp";
 import linkedin from "./images/webp/linkedin.webp";
 import github1 from "./images/webp/github1.webp";
@@ -47,6 +48,7 @@ export default{
     logoA,
     pictureA,
     pictureB,
+    socialBack,
     whatsapp,
     linkedin,
     github1,

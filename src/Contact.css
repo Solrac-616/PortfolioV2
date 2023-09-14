@@ -1,6 +1,10 @@
 .section-socials
 {
   position: relative;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .back-img-absolute
