@@ -149,7 +149,7 @@ const projects =
 [
   {
     id: 1,
-    name: "React Portfolio V1",
+    name: "Portfolio V1",
     img: Images.project1,
     description: "Proyecto numero 1",
     categorys: ["react"]

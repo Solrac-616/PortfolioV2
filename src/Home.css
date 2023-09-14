@@ -634,8 +634,7 @@
 
 .card-project
 {
-  width: 100%;
-  max-width: 350px;
+  width: 350px;
   height: 400px;
   margin: auto;
   position: relative;
@@ -953,6 +952,33 @@
   {
     font-size: 18px;
   }
+
+  /* SKILLS */
+  .card-project 
+  {
+    width: 290px;
+    height: 360px;
+  }
+
+  .card-project .card-img 
+  {
+    height: 220px;
+  }
+
+  .card-project .card-content 
+  {
+    height: 130px;
+  }
+
+  .card-project h3
+  {
+    font-size: 14px;
+  }
+
+  .card-project .card-content
+  {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 1023px)
@@ -1001,6 +1027,15 @@
   .about-content .about-resume
   {
     width: 60%;
+  }
+
+  /* SKILLS */
+
+  .projects-list 
+  {
+    /* grid-column-gap: 1rem; */
+    /* grid-row-gap: 2rem; */
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -1062,6 +1097,24 @@
   {
     padding: 80px 0 70px 0px;
   }
+
+  /* SKILLS */
+  .skills-head 
+  {
+    height: 215px;
+  }
+
+  .skill-item .skill 
+  {
+    height: 110px;
+    width: 110px;
+  }
+
+  .skill-item .skill img 
+  {
+    max-height: 90px;
+    max-width: 90px;
+  }
 }
 
 @media screen and (max-width: 639px)
@@ -1095,6 +1148,54 @@
     font-size: 13px;
     font-weight: 700;
     text-shadow: white 0px 0px 5px;
+  }
+
+  /* SKILLS */
+  .about-section h2,
+  .skills-head h2,
+  .section-projects h2
+  {
+    font-size: 50px;
+  }
+
+  .row-filters 
+  {
+    gap: 10px;
+  }
+
+  .row-filters button 
+  {
+    font-size: 15px;
+    width: 80px;    
+    padding: 6px 0;
+  }
+
+  /* SKILLS */
+
+  .projects-list 
+  {
+    grid-column-gap: 0.5rem;
+  }
+
+  .card-project 
+  {
+    width: 180px;
+    height: 255px;
+  }
+
+  .card-project .card-img 
+  {
+    height: 150px;
+  }
+
+  .card-project .card-content 
+  {
+    height: 95px;
+  }
+
+  .card-info
+  {
+    font-size: 10px;
   }
 }
 
