@@ -151,28 +151,28 @@ const projects =
     id: 1,
     name: "Portfolio V1",
     img: Images.project1,
-    description: "Proyecto numero 1",
+    description: "Primera web desarrollado con React, portafolio version 1 (2022)",
     categorys: ["react"]
   },
   {
     id: 2,
     name: "CRUD Angular",
     img: Images.project2,
-    description: "Proyecto numero 2",
+    description: "CRUD de tareas desarrollada con Angular + Nodejs.",
     categorys: ["angular", "node"]
   },
   {
     id: 3,
     name: "Garibaldy Web",
     img: Images.project3,
-    description: "Proyecto numero 3",
+    description: "Página web de tecnologías garibaldy.",
     categorys: ["react"]
   },
   {
     id: 4,
     name: "API RESTful V1",
     img: Images.project4,
-    description: "Proyecto numero 4",
+    description: "Primera API RESTful desarrollada con Nodejs + Sequelize + Express.",
     categorys: ["node"]
   },
 ]

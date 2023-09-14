@@ -831,6 +831,12 @@
   color: #000000;
 }
 
+.card-project .card-info p
+{
+  text-align: left;
+  margin-top: 15px;
+}
+
 .card-project .card-info .categorys
 {
   width: 100%;

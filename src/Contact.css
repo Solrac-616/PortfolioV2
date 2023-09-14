@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+.socials-background-base
+{
+  opacity: 0.2 !important;
+}
+
 .back-img-absolute
 {
   position: absolute;
