@@ -1,0 +1,22 @@
+/* -------- ESTILOS DE SCROLLBAR*/
+::-webkit-scrollbar 
+{
+    width: 10px; /* ancho barra */
+}
+::-webkit-scrollbar-track 
+{
+/*background: #45f6ff;*/ /* color fondo barra */
+/* background: linear-gradient(#03a9f4,#000532); */
+    background: #212121
+}
+::-webkit-scrollbar-thumb 
+{
+    background: #38bff8ad; /* color barra */
+    border-radius: 10px; /* borde barra */
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background: #38bff8; /* color barra hover */
+    box-shadow: 0 0 11px 0 #38bff8d3;
+}
