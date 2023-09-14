@@ -396,7 +396,8 @@
   display: flex;
   gap: 25px;
 }
-.about-content > div
+.about-content .about-picture,
+.about-content .about-resume
 {
   width: 50%;
   max-width: 50%;
@@ -974,6 +975,33 @@
   {
     font-size: 12px;
   }
+
+  /*              ABOUT */
+
+  .about-resume p 
+  {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .about-section 
+  {
+    padding: 0px 0 25px 0;
+  }
+
+  .about-resume 
+  {
+    padding: 60px 0 60px 0px;
+  }
+
+  .about-content .about-picture
+  {
+    width: 40%;
+  }
+  .about-content .about-resume
+  {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 767px)
@@ -1009,6 +1037,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  /* ABOUT */
+
+  .about-head 
+  {
+    height: 215px;
+  }
+
+  .about-content .about-picture
+  {
+    display: none;
+    visibility: hidden;
+  }
+  .about-content .about-resume
+  {
+    width: 100%;
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .about-resume 
+  {
+    padding: 80px 0 70px 0px;
   }
 }
 
