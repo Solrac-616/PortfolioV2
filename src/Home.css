@@ -1193,9 +1193,15 @@
     height: 95px;
   }
 
+  .card-project h3 
+  {
+    font-size: 11px;
+  }
+
   .card-info
   {
     font-size: 10px;
+    font-weight: 500;
   }
 }
 
