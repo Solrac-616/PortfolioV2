@@ -151,6 +151,7 @@ const projects =
     id: 1,
     name: "Portfolio V1",
     img: Images.project1,
+    url: 'https://carlosbritoportfolio.netlify.app/',
     description: "Primera web desarrollado con React, portafolio version 1 (2022)",
     categorys: ["react"]
   },
@@ -158,6 +159,7 @@ const projects =
     id: 2,
     name: "CRUD Angular",
     img: Images.project2,
+    url: 'https://github.com/Solrac-616/server',
     description: "CRUD de tareas desarrollada con Angular + Nodejs.",
     categorys: ["angular", "node"]
   },
@@ -165,6 +167,7 @@ const projects =
     id: 3,
     name: "Garibaldy Web",
     img: Images.project3,
+    url: 'https://garibaldy.com/',
     description: "Página web de tecnologías garibaldy.",
     categorys: ["react"]
   },
@@ -172,6 +175,7 @@ const projects =
     id: 4,
     name: "API RESTful V1",
     img: Images.project4,
+    url: 'https://github.com/Solrac-616/API-RESTful',
     description: "Primera API RESTful desarrollada con Nodejs + Sequelize + Express.",
     categorys: ["node"]
   },

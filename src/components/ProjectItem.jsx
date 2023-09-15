@@ -14,7 +14,7 @@ const ProjectItem = ({ project }) => {
       className="card-project"
     >
       <div className="card-img" style={{ backgroundImage: `url(${project.img})` }}>
-        <a href="https://github.com/Solrac-616?tab=repositories" target="_blank" rel="noreferrer">
+        <a href={project.url} target="_blank" rel="noreferrer">
           <div className="alt">
             <p>View Project</p> <i className="fa-solid fa-angles-right"></i>
           </div>

@@ -4,7 +4,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { appear, fadeIn, slideInFade, staggerContainer } from '../../utils/motion';
 import { AnimateH2 } from '../../components/AnimateTitle';
 import NavObserver from '../../components/NavObserver';
-
+import document from '../../assets/documents/CarlosBritoCurriculoATSEng.pdf'
 
 const Banner = () => {
   const [angle, setAngle] = useState(0);
@@ -77,6 +77,11 @@ const Banner = () => {
               repeat={Infinity}
             />
           </motion.div>
+          <div className="cv-downloader" data-cursor-text={'Download'} data-cursor-size="90px" data-cursor-color={'#000000A7'}>
+            <a href={document} download='CarlosBritoCurriculoATSEng.pdf'>
+              CV ATS
+            </a>
+          </div>
         </div>
       </div>
       <div className="banner-inset">
